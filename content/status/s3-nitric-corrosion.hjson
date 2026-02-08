@@ -1,0 +1,18 @@
+speedMultiplier: 0.9
+damage: 3
+name: Nitric corrosion
+type: StatusEffect
+effect: {
+  type: ParticleEffect
+  length: 3
+  particles: 2
+  line: true
+  colorFrom: bedbdd
+  colorTo: bedbdd
+  lenFrom: 1
+  lenTo: 0
+  strokeFrom: 0.5
+  strokeTo: 0
+  lifetime: 15
+  interp: circleOut
+    }

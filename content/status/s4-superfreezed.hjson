@@ -1,0 +1,18 @@
+speedMultiplier: 0.4
+dragMultiplier: 1.5
+name: Superfreezed
+type: StatusEffect
+effect: {
+  type: ParticleEffect
+  length: 3
+  particles: 2
+  line: true
+  colorFrom: 85ccff
+  colorTo: 85ccff
+  lenFrom: 1
+  lenTo: 0
+  strokeFrom: 0.5
+  strokeTo: 0
+  lifetime: 15
+  interp: circleOut
+    }

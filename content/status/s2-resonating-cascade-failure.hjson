@@ -1,0 +1,18 @@
+dragMultiplier: 0.5
+damage: 0.5
+name: Resonating Cascade Failure
+type: StatusEffect
+effect: {
+  type: ParticleEffect
+  length: 5
+  particles: 5
+  line: true
+  colorFrom: ff0000
+  colorTo: ff0000aa
+  lenFrom: 1
+  lenTo: 0
+  strokeFrom: 0.5
+  strokeTo: 0
+  lifetime: 30
+  interp: circleOut
+    }
