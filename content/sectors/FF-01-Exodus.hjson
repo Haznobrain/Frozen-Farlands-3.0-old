@@ -1,0 +1,8 @@
+planet: Zilo
+sector: 8
+research: {
+    parent: zilo-core1
+}
+difficulty: 1
+alwaysUnlocked: true
+overrideLaunchDefaults: true
