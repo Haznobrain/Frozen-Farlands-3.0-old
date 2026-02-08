@@ -1,0 +1,52 @@
+type: GenericCrafter
+category: crafting
+health: 400
+size: 2
+fogRadius: 2
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 10
+liquidCapacity: 60
+ambientSound: boiler-hum
+ambientSoundVolume: 1.5
+craftTime: 180
+consumes: {
+  power: 1
+  items: [
+      b3-solid-hydrazine/3
+    ]
+    }
+outputLiquids: [
+    hydrazine/0.2
+        ]
+  requirements: [
+    a1-yttrium/25
+    a3-ice-shard/10
+    b2-niobium/10
+      ]
+  drawer: {
+    type: DrawMulti
+    iconOverride: [
+        -icon
+        ]
+    drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+  }
+      {
+    type: DrawLiquidTile
+    drawLiquid: hydrazine
+    padding: 1
+      }
+{
+  type: DrawRegion
+    }
+{
+  type: DrawGlowRegion
+  color: ff0000
+  suffix: -heat
+    }
+]
+}

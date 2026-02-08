@@ -1,0 +1,62 @@
+type: GenericCrafter
+category: crafting
+health: 800
+size: 3
+fogRadius: 3
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 20
+liquidCapacity: 60
+ambientSound: generator-hum
+ambientSoundVolume: 0.8
+craftTime: 180
+consumes: {
+    power: 1
+  liquids: [
+  hydrazine/0.2
+  ]
+  }
+outputLiquids: [
+  nitric-acid/0.2
+]
+
+requirements: [
+  a1-yttrium/40
+  a3-ice-shard/10
+  ]
+research: a1-yttrium
+researchCost: [
+  a1-yttrium/1
+  ]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -bottom
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: nitric-acid
+  padding: 2
+  }
+  {
+    type: DrawPlasma
+    suffix: -plasma
+    plasmas: 2
+    plasma1: ffb275
+    plasma2: ffb275
+  }
+  {
+  type: DrawDefault
+  }
+  {
+    type: DrawGlowRegion
+    suffix: -glow 
+    glowScale: 10
+    alpha: 1
+  }
+  ]
+  }

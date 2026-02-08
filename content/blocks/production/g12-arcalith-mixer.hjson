@@ -1,0 +1,64 @@
+type: GenericCrafter
+category: crafting
+health: 400
+size: 2
+fogRadius: 2
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 10
+liquidCapacity: 60
+ambientSound: boiler-hum
+ambientSoundVolume: 1.5
+craftTime: 180
+consumes: {
+    power: 1
+  liquids: [
+  water/0.2
+  ]
+  items: [
+    a2-arcanite/2
+  ]
+  }
+outputLiquids: [
+  arcalith/0.4
+]
+
+requirements: [
+  a1-yttrium/40
+  a3-ice-shard/10
+  ]
+research: a1-yttrium
+researchCost: [
+  a1-yttrium/1
+  ]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -bottom
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: arcalith
+  padding: 2
+  }
+  {
+    type: DrawRegion
+    suffix: -rotor
+    rotateSpeed: -3
+  }
+  {
+  type: DrawGlowRegion
+  suffix: -heat
+  glowScale: 10
+  color: fa7020
+  alpha: 0.7
+  }
+  {
+  type: DrawDefault
+  }
+  ]
+  }

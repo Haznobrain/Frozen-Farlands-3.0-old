@@ -1,0 +1,84 @@
+type: GenericCrafter
+category: crafting
+health: 1400
+size: 4
+fogRadius: 4
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 10
+liquidCapacity: 60
+ambientSound: chemical-mixer
+ambientSoundVolume: 0.6
+craftTime: 180
+consumes: {
+    power: 1
+  liquids: [
+  arcalith/0.2
+  hydrazine/0.2
+  ]
+  }
+outputLiquids: [
+  resonating-fuel/0.4
+]
+
+requirements: [
+  a1-yttrium/40
+  a3-ice-shard/10
+  ]
+research: a1-yttrium
+researchCost: [
+  a1-yttrium/1
+  ]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -bottom
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: resonating-fuel
+  padding: 2
+  alpha: 5
+  }
+  {
+type: drawMultiWeave
+rotateSpeed: 1
+rotateSpeed2: -2
+fadeWeave: true
+pulse: 0.2
+pulseScl: 16
+glowColor: ff7e7e60
+weaveColor: d6454560
+}
+  {
+  type: DrawBubbles
+  color: ee2121
+  amount: 50
+  radius: 2
+  spread: 9
+  }
+  {
+  type: DrawPistons
+  suffix: -piston
+  lenOffset: -10
+  sinMag: 18
+  sinScl: 20
+  angleOffset: 0
+  sinOffset: 0
+  sides: 4
+  }
+  {
+  type: DrawGlowRegion
+  suffix: -heat
+  glowScale: 10
+  alpha: 0.7
+  }
+  {
+  type: DrawDefault
+  }
+  ]
+  }

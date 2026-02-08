@@ -1,0 +1,67 @@
+type: GenericCrafter
+category: crafting
+health: 2400
+size: 4
+fogRadius: 4
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 20
+ambientSound: generator-hum
+ambientSoundVolume: 0.8
+craftTime: 120
+consumes: {
+    power: 1
+  liquids: [
+  xenon/0.4
+  ]
+  items: [
+    a3-ice-shard/2
+  ]
+  }
+outputItems: [
+  b3-aerogel/2
+]
+
+requirements: [
+  a1-yttrium/40
+  a3-ice-shard/10
+  ]
+research: a1-yttrium
+researchCost: [
+  a1-yttrium/1
+  ]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -bottom
+  }
+  {
+  type: DrawLiquidTile
+  drawLiquid: xenon
+  padding: 2
+  }
+  {
+  type: DrawPistons
+  suffix: -piston
+  lenOffset: -5
+  sinMag: 6
+  sinScl: 11
+  angleOffset: 0
+  sinOffset: 0
+  sides: 2
+  }
+  {
+  type: DrawGlowRegion
+  suffix: -glow
+  glowScale: 10
+  alpha: 0.7
+  }
+  {
+  type: DrawDefault
+  }
+  ]
+  }

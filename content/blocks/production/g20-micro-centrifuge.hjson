@@ -1,0 +1,46 @@
+type: GenericCrafter
+outputItem: b4-shavrite/1
+craftTime: 300
+size: 2
+research: g27-resonating-refinery
+category: crafting
+liquidCapacity: 50
+outputLiquid: water/0.166666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+requirements: [
+    a1-yttrium/160
+    a2-arcanite/140
+    b2-niobium/40
+    b3-aerogel/35
+    a4-cryogenium/100
+      ]
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+consumes: {
+  liquids: [
+      cryofluid/0.2
+      ]
+  power: 0.2
+    }
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+  }
+{
+type: DrawLiquidTile
+drawLiquid: water
+}
+  {
+type: DrawRegion
+rotateSpeed: 10
+suffix: -spinner
+}
+{
+type: DrawRegion
+  }
+]
+}

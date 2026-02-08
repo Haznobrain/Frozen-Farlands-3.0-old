@@ -1,0 +1,57 @@
+type: GenericCrafter
+category: crafting
+health: 400
+size: 2
+fogRadius: 2
+hasItems: true
+hasPower: true
+hasLiquids: true
+itemCapacity: 10
+liquidCapacity: 60
+ambientSound: boiler-hum
+ambientSoundVolume: 1.5
+craftTime: 180
+consumes: {
+  power: 1
+  items: [
+      a4-cryogenium/3
+    ]
+    }
+outputLiquids: [
+    cryofluid/0.2
+        ]
+  requirements: [
+    a1-yttrium/25
+    a3-ice-shard/10
+      ]
+  drawer: {
+    type: DrawMulti
+    iconOverride: [
+        -icon
+        ]
+    drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+  }
+      {
+    type: DrawLiquidTile
+    drawLiquid: cryofluid
+    padding: 1
+      }
+{  
+    type: DrawRegion
+    suffix: -rotator
+    rotateSpeed: 2
+      }
+{
+  type: DrawGlowRegion
+  rotateSpeed: 2
+  suffix: -rotator-heat
+  color: ff0000
+    }
+{
+  type: DrawRegion
+    }
+]
+}

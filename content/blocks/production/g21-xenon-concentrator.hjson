@@ -1,0 +1,41 @@
+type: GenericCrafter
+size: 2
+health: 200
+category: crafting
+squareSprite: false
+liquidCapacity: 20
+ambientSound: steam-bubbles
+ambientSoundVolume: 0.2
+craftTime: 30
+outputLiquid: xenon/0.2
+requirements: [
+  a1-yttrium/40
+  b2-niobium/20
+  a3-ice-shard/10
+]
+researchCostMultiplier: 10
+consumes: {
+  power: 2
+}
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: xenon
+      padding: 1.8
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawParticles
+      color: 64a0e5
+    }
+  ]
+}
+research: silicon-extractor
