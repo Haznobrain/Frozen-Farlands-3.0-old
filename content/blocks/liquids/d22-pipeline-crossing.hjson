@@ -1,0 +1,11 @@
+type: LiquidJunction
+health: 90
+category: liquid
+placeableLiquid: true
+requirements: [
+  a1-yttrium/1
+]
+
+research: {
+  parent: d21-pipeline-splitter
+}

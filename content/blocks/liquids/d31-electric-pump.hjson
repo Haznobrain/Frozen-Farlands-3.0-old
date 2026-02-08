@@ -1,0 +1,22 @@
+type: Pump
+health: 300
+size: 2
+pumpAmount: 0.2
+squareSprite: false
+category: liquid
+hasPower: true
+consumes: {
+power: 0.30
+  }
+requirements: [
+  a1-yttrium/60
+]
+research: zilo-core-1
+researchCost: [
+    a1-yttrium/150
+    a3-ice-shard/100
+  ]
+
+research: {
+  parent: d11-low-flow-pipeline
+}

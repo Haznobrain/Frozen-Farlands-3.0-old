@@ -1,0 +1,20 @@
+type: Conduit
+leaks: true
+health: 50
+hasPower: false
+requirements: [
+  a1-yttrium/1
+  a3-ice-shard/1
+]
+liquidCapacity: 5
+liquidPressure: 1
+botColor: 4a4b53
+category: liquid
+researchCost: [
+    a1-yttrium/50
+    a3-ice-shard/50
+]
+
+research: {
+  parent: zilo-core1
+}

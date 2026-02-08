@@ -1,0 +1,12 @@
+type: LiquidRouter
+health: 90
+liquidCapacity: 20
+category: liquid
+placeableLiquid: true
+requirements: [
+  a1-yttrium/1
+]
+
+research: {
+  parent: d11-low-flow-pipeline
+}

@@ -1,0 +1,20 @@
+type: Conduit
+leaks: true
+health: 250
+hasPower: false
+requirements: [
+  a1-yttrium/1
+  a3-ice-shard/1
+]
+liquidCapacity: 10
+liquidPressure: 2
+botColor: 4a4b53
+category: liquid
+researchCost: [
+  a1-yttrium/1
+  a3-ice-shard/1
+]
+
+research: {
+  parent: d12-high-flow-pipeline
+}
