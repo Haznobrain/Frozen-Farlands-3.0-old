@@ -1,0 +1,187 @@
+type: ItemTurret
+category: turret
+size: 3
+health: 900
+range: 240
+rotateSpeed: 10
+reload: 10
+recoil: 3
+shoot: {
+type: ShootAlternate
+barrels: 3
+spread: 4
+}
+
+requirements: [
+  a1-yttrium/30
+  b2-niobium/80
+  b3-aerogel/10
+]
+
+researchCost: [
+  a1-yttrium/120
+  b2-niobium/320
+  b3-aerogel/40
+]
+
+research: {
+  parent: a11-pin
+}
+
+ammoTypes: {
+    a1-yttrium: {
+    type: BasicBulletType
+    reloadMultiplier: 0.75
+    speed: 4
+    lifetime: 56
+    damage: 15
+    inaccuracy: 10
+    width: 8
+    height: 14
+    frontColor: b7e7ff
+    backColor: 80c7eb
+    shootEffect: shootSmall
+    ammoMultiplier: 5
+    collidesTiles: true
+    splashDamageRadius: 10
+    splashDamage: 15
+    despawnHit: true
+    trailColor: 80c7eb
+    trailWidth: 2
+    trailLength: 9
+      hitEffect: [
+        {
+          type: ParticleEffect
+          particles: 6
+          line: true
+          lifetime: 15
+          length: 15
+          lenFrom: 3
+          lenTo: 0
+          strokeFrom: 1
+          strokeTo: 0
+          colorFrom: b7e7ff
+          colorTo: 80c7eb
+        }
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 10
+          lifetime: 15
+          strokeFrom: 3
+          strokeTo: 0
+          colorFrom: d9f2ff
+          colorTo: 80c7eb
+        }
+      ]
+      fragVelocityMin: 0.9
+      fragVelocityMax: 1.5
+      fragBullets: 2
+      fragBullet: {
+        speed: 4
+        collidesTiles: false
+        damage: 10
+        width: 6
+        height: 6
+        lifetime: 6
+        despawnHit: true
+      hitEffect: [
+        {
+          type: ParticleEffect
+          particles: 6
+          line: true
+          lifetime: 15
+          length: 15
+          lenFrom: 3
+          lenTo: 0
+          strokeFrom: 1
+          strokeTo: 0
+          colorFrom: d9f2ff
+          colorTo: 80c7eb
+        }
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 5
+          lifetime: 10
+          strokeFrom: 2
+          strokeTo: 0
+          colorFrom: d9f2ff
+          colorTo: 80c7eb
+        }
+      ]
+        frontColor: d9f2ff
+        backColor: 80c7eb
+      }
+  }
+  a2-arcanite: {
+    type: BasicBulletType
+    speed: 5
+    lifetime: 39
+    damage: 20
+    width: 8
+    height: 14
+    inaccuracy: 15
+    frontColor: f6e096
+    backColor: e65f1c
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    ammoMultiplier: 4
+    incendAmount: 1
+    incendChance: 0.2
+    incendSpread: 5
+    collidesTiles: true
+    despawnHit: true
+    trailColor: e65f1c
+    trailWidth: 2
+    trailLength: 9
+    hitEffect: pointHit
+    trailChance: 1
+    trailEffect: {
+    type: ParticleEffect
+    particles: 1
+    length: 10
+    lifetime: 15
+    sizeFrom: 5
+    sizeTo: 0
+    colorFrom: f6e096
+    colorTo: e65f1c
+    region: particle
+    }
+  }
+}
+
+recoils: 3
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -front-r
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -2
+      recoilIndex: 0
+    }
+    {
+      type: RegionPart
+      suffix: -front-l
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -2
+      recoilIndex: 1
+    }
+    {
+      type: RegionPart
+      suffix: -front-mid
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -2
+      recoilIndex: 2
+    }
+  ]
+}

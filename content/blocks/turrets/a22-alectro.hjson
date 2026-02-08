@@ -1,0 +1,196 @@
+type: PowerTurret
+category: turret
+size: 5
+health: 2200
+range: 440
+rotateSpeed: 1.2
+reload: 500
+xRand: 0
+shake: 25
+recoil: 3
+shootSound: plasmaCannon
+shoot: {
+  type: shootSine
+  firstShotDelay: 90
+}
+consumes: {
+  power: 16
+  liquids: [
+  xenon/0.8
+  ]
+}
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a16-defragmentation
+}
+
+shootType: {
+  type: LaserBulletType
+  colors: [ 8aecff50, 8aecff, ffffff  ]
+  length: 580
+  width: 60
+  damage: 450
+  lifetime: 60
+  sideAngle: 135
+  sideWidth: 2
+  sideLength: 90
+      lightningSpacing: 18
+      lightningAngleRand: 12
+      lightningDelay: 0.8
+      lightningLength: 8
+      lightningLengthRand: 1.2
+      lightningDamage: 12
+      lightningColor: 8aecff
+chargeEffect: [
+           {
+           type: ParticleEffect
+           particles: 90
+           length: 60
+           baseLength: -60
+           baseRotation: -180
+           cone: 30
+           lifetime: 90
+           line: true
+           lenTo: 0
+           lenFrom: 12
+           strokeTo: 0
+           strokeFrom: 4
+           colorFrom: ffffff
+           colorTo: 8aecff
+           interp: swingIn
+           sizeInterp: exp5Out
+          }
+          {
+           type: ParticleEffect
+           particles: 80
+           length: 190
+           baseLength: -190
+           baseRotation: -180
+           cone: 10
+           lifetime: 90
+           line: true
+           lenTo: 0
+           lenFrom: 7
+           strokeTo: 0
+           strokeFrom: 3
+           colorFrom: ffffff
+           colorTo: 8aecff
+           interp: exp10
+           sizeInterp: exp10Out
+          }
+]
+    "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "8aecff",
+                "colorTo": "000000",
+                "sizeFrom": 1,
+                "sizeTo": 600,
+                "lifetime": 200
+            }
+             {
+              type: ParticleEffect
+              particles: 18
+              lifetime: 60
+              length: 30
+              sizeFrom: 5
+              sizeTo: 1
+              colorFrom: 8aecff00
+              colorTo: 8aecff
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: frozen-farlands-triangle
+           }
+           {
+           type: ParticleEffect
+           particles: 60
+           length: 200
+           cone: 20
+           lifetime: 200
+           sizeFrom: 24
+           sizeTo: 0
+           colorFrom: ffffff80
+           colorTo: 8aecff80
+           region: particle
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+           {
+           type: ParticleEffect
+           particles: 70
+           length: 200
+           cone: 20
+           lifetime: 200
+           sizeFrom: 9
+           sizeTo: 0
+           colorFrom: ffffff80
+           colorTo: 8aecff80
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+           {
+           type: ParticleEffect
+           particles: 90
+           length: 340
+           cone: 10
+           lifetime: 180
+           sizeFrom: 12
+           sizeTo: 0
+           colorFrom: ffffff
+           colorTo: 8aecff
+           region: particle
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+          {
+           type: ParticleEffect
+           particles: 130
+           length: 340
+           cone: 10
+           lifetime: 180
+           sizeFrom: 6
+           sizeTo: 0
+           colorFrom: ffffff80
+           colorTo: 8aecff80
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+        ]
+    },
+}
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -side
+      mirror: true
+      under: true
+      progress: warmup
+      moveX: -1.6
+    }
+    {
+      type: RegionPart
+      suffix: -cannon
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -5
+    }
+  ]
+}

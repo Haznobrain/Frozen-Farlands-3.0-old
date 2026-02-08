@@ -1,0 +1,327 @@
+type: PowerTurret
+category: turret
+size: 4
+health: 2300
+range: 250
+reload: 120
+rotateSpeed: 3
+shootWarmupSpeed: 0.09
+minWarmup: 0.9
+consumes: {
+  power: 6
+    }
+recoil: 3
+moveWhileCharging: false
+coolant: {
+  type: ConsumeLiquid
+  liquid: resonating-fuel
+  amount: 0.3
+}
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a18-leech
+}
+
+shoot: {
+  firstShotDelay: 30
+    }
+shootSound: moonrayShoot
+shootType: {
+  type: BasicBulletType
+  damage: 145
+  chargeEffect: {
+    type: ParticleEffect
+    interp: elasticIn
+    sizeInterp: linear
+    lifetime: 30
+    baseLength: -30
+    length: 30
+    sizeFrom: 0
+    sizeTo: 4
+    colorFrom: ff6efb
+    colorTo: ff6efb
+      }
+  shootEffect: {
+    type: MultiEffect
+    effects: [shootBigColor,{
+        type: ParticleEffect
+        cone: 12
+        particles: 8
+        region: mine-bullet
+        colorFrom: ff6efb
+        colorTo: ff6efb
+        length: 40
+        particles: 10
+        sizeFrom: 8
+        interp: pow5In
+        sizeInterp: pow10In
+        lifetime: 30
+          }
+      ]
+      }
+  smokeEffect: {
+      type: WaveEffect
+      strokeFrom: 6
+      lifetime: 12
+      sizeTo: 30
+      colorFrom: ff6efb
+      colorTo: ff6efb
+      }
+  despawnEffect: hitBulletColor
+  trailInterval: 0.1
+  pierce: true
+  pierceBuilding: true
+  pierceCap: 15
+  buildingDamageMultiplier: 0.1
+  trailEffect: {
+    type: ParticleEffect
+    length: 10
+    particles: 4
+    region: mine-bullet
+    colorFrom: ffffff
+    colorTo: ff6efb00
+    sizeFrom: 4
+    sizeTo: 1
+    sizeInterp: pow3In
+    lifetime: 100
+}
+  speed: 25
+  lifetime: 10
+  homingPower: 30
+  homingRange: 120
+  sprite: mine-bullet
+  frontColor: ffffff
+  backColor: ff6efb
+  height: 10
+  width: 10
+  shrinkX: 0
+  shrinkY: 0
+  hitEffect: hitBulletColor
+  fragBullets: 3
+  fragBullet: {
+      type: BasicBulletType
+      damage: 20
+      trailInterval: 0.1
+      homingRange: 120
+      trailEffect: {
+        type: ParticleEffect
+        length: 4
+        particles: 4
+        region: mine-bullet
+        colorFrom: ffffff
+        colorTo: ff6efb00
+        sizeFrom: 4
+        sizeTo: 1
+        sizeInterp: pow3In
+        lifetime: 100
+    }
+      despawnEffect: hitBulletColor
+      speed: 25
+      lifetime: 5
+      homingPower: 30
+      sprite: mine-bullet
+      frontColor: ffffff
+      backColor: ff6efb
+      height: 4
+      width: 4
+      shrinkX: 0
+      shrinkY: 0
+      hitEffect: hitBulletColor
+      pierce: true
+      pierceBuilding: false
+      pierceCap: 2
+}
+}
+
+
+
+drawer: {
+  type: DrawTurret
+  parts: [
+{
+type: RegionPart
+suffix: -side
+heatColor: ff6efb
+heatProgress: warmup
+moves: [
+{
+type: PartMove
+rotation: 10
+progress: charge
+}
+  {
+type: PartMove
+rotation: -10
+progress: recoil
+y: -3
+  }
+  ]
+mirror: true
+children: [
+{
+type: RegionPart
+suffix: -blade
+mirror: true
+heatColor: ff6efb
+moveY: -4
+moves: [
+  {
+  type: PartMove
+  y: 2
+  progress: charge
+    }
+    ]
+}
+  ]
+}
+    {
+    type: RegionPart
+    suffix: -barrel
+    heatColor: ff0000
+    heatProgress: recoil
+    moveY: -4
+    progress: recoil
+    under: true
+    children: [
+{
+    suffix: -barrel-glow
+    color: ff6efb00
+    colorTo: ff6efbff
+    mixColor: ff6efb00
+    mixColorTo: ff6efbff
+    blending: additive
+    progress: warmup
+      }
+        ]
+      }
+{
+type: RegionPart
+suffix: -blade-bottom
+under: true
+moveRot: 0
+mirror: true
+progress: warmup
+heatProgress: warmup
+heatColor: ff6efbee
+moves: [
+{
+type: PartMove
+rot: 2
+progress: recoil
+}
+  ]
+  }
+  {
+type: RegionPart
+suffix: -blade-bottom
+under: true
+moveRot: -15
+mirror: true
+progress: warmup
+heatProgress: warmup
+heatColor: ff6efbcc
+moves: [
+{
+type: PartMove
+rot: 3
+progress: recoil
+}
+  ]
+  }
+    {
+type: RegionPart
+suffix: -blade-bottom
+under: true
+moveRot: -30
+mirror: true
+progress: warmup
+heatProgress: warmup
+heatColor: ff6efbaa
+moves: [
+{
+type: PartMove
+rot: 4
+progress: recoil
+}
+  ]
+  }
+    {
+type: RegionPart
+suffix: -blade-bottom
+under: true
+moveRot: -45
+mirror: true
+progress: warmup
+heatProgress: warmup
+heatColor: ff6efb55
+moves: [
+{
+type: PartMove
+rot: 5
+progress: recoil
+}
+  ]
+  }
+    {
+type: RegionPart
+suffix: -blade-bottom
+under: true
+moveRot: -60
+mirror: true
+progress: warmup
+heatProgress: warmup
+heatColor: ff6efb33
+moves: [
+{
+type: PartMove
+rot: 6
+progress: recoil
+}
+  ]
+  }
+    {
+type: RegionPart
+suffix: -blade-bottom
+under: true
+moveRot: -75
+mirror: true
+progress: warmup
+heatProgress: warmup
+heatColor: ff6efbbb
+moves: [
+{
+type: PartMove
+rot: 7
+progress: recoil
+}
+  ]
+moveY: 0.5
+  }
+    {
+type: RegionPart
+suffix: -blade-bottom
+under: true
+moveRot: -90
+mirror: true
+moveY: 1
+progress: warmup
+heatProgress: warmup
+heatColor: ff6efbaa
+moves: [
+{
+type: PartMove
+rot: 8
+progress: recoil
+}
+  ]
+  }
+  ]
+}

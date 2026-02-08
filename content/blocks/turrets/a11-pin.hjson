@@ -1,0 +1,73 @@
+type: ItemTurret
+category: turret
+size: 2
+health: 500
+range: 180
+rotateSpeed: 5
+reload: 40
+xRand: 1
+recoil: 1
+outlineColor: 292a2c
+shootSound: shootAlt
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/80
+]
+
+research: {
+  parent: zilo-core1
+}   
+
+ammoTypes: {
+  a1-yttrium: {
+    type: BasicBulletType
+    speed: 6
+    lifetime: 36
+    damage: 20
+    width: 10
+    height: 14
+    frontColor: b4bccc
+    sprite: frozen-farlands-pin-bullet
+    backColor: 72757a
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+    ammoMultiplier: 4
+    collidesTiles: true
+    hitEffect: pointHit
+
+    trailChance: 0.3
+    trailLength: 3
+    trailWidth: 2
+    trailColor: b4bccc
+    trailEffect: {
+    type: ParticleEffect
+    particles: 1
+    length: 10
+    lifetime: 15
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: b4bccc
+    colorTo: 72757a
+    region: particle
+  }
+  }
+}
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -front
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -1.2
+    }
+  ]
+}

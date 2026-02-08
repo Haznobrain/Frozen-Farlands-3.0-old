@@ -1,0 +1,163 @@
+type: ItemTurret
+category: turret
+size: 3
+health: 600
+reload: 300
+shootSound: laserblast
+maxAmmo: 40
+range: 250
+shootY: 11
+recoil: 3
+rotateSpeed: 2.5
+shootEffect: hitLaserBlast
+smokeEffect: smokeCloud
+consumeAmmoOnce: false
+moveWhileCharging: false
+consumes: {
+  power: 20
+}
+shoot: {
+  firstShotDelay: 200
+  shots: 20
+}
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a12-stinger
+}
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+    outline: false
+    type: RegionPart
+    suffix: -glow1
+    color: ffe78500
+    colorTo: ffe785ff
+    mixColor: ffe78500
+    mixColorTo: ffe785ff
+    blending: additive
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.1
+        }
+  }
+    {
+    type: RegionPart
+    suffix: -glow2
+    outline: false
+    color: ffe78500
+    colorTo: ffe785ff
+    mixColor: ffe78500
+    mixColorTo: ffe785ff
+    blending: additive
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.25
+        }
+  }
+    {
+    type: RegionPart
+    suffix: -glow3
+    outline: false
+    color: ffe78500
+    colorTo: ffe785ff
+    mixColor: ffe78500
+    mixColorTo: ffe785ff
+    blending: additive
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.5
+        }
+  }
+    {
+    type: RegionPart
+    suffix: -glow4
+    outline: false
+    color: ffe78500
+    colorTo: ffe785ff
+    mixColor: ffe78500
+    mixColorTo: ffe785ff
+    blending: additive
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.75
+        }
+  }
+]
+  }
+ammoTypes: {
+  a2-arcanite: {
+    type: LightningBulletType
+    lightningLength: 38
+    lightningColor: ffe785ff
+    lifetime: 12
+    lightningLengthRand: 5
+    createChance: 0.1
+    damage: 45
+    status: electrified
+    chargeEffect: {
+      type: ParticleEffect
+      interp: circleIn
+      particles: 60
+      line: true
+      length: 60
+      baseLength: -60
+      lenFrom: 0
+      lenTo: 4
+      strokeFrom: 1
+      strokeTo: 1
+      lifetime: 200
+      colorFrom: ffe785ff
+      colorTo: ffe785ff
+        }
+    hitEffect: hitLaserColor
+    hitColor: ffe785ff
+      }
+b5-metallic-arcanthium: {
+  type: LightningBulletType
+  lightningLength: 50
+  rangeChange: 75
+  lightningColor: ffb861ff
+  lifetime: 12
+    lightningLengthRand: 5
+    createChance: 0.5
+    damage: 120
+    ammoMultiplier: 1
+    status: {
+      name: paralysed
+      speedMultiplier: 0
+      reloadMultiplier: 0
+        }
+    chargeEffect: {
+      type: ParticleEffect
+      interp: circleIn
+      particles: 60
+      line: true
+      length: 60
+      baseLength: -60
+      lenFrom: 0
+      lenTo: 4
+      strokeFrom: 1
+      strokeTo: 1
+      lifetime: 200
+      colorFrom: ffb861
+      colorTo: ffb861
+        }
+    hitEffect: hitLaserColor
+    hitColor: ffb861ff
+      }
+}

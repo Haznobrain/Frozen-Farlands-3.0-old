@@ -1,0 +1,61 @@
+type: ItemTurret
+category: turret
+size: 2
+health: 500
+range: 180
+rotateSpeed: 5
+reload: 40
+xRand: 1
+recoil: 1
+outlineColor: 292a2c
+shootSound: shotgun
+
+requirements: [
+  a1-yttrium/30
+  a2-arcanite/20
+]
+
+researchCost: [
+  a1-yttrium/90
+  a2-arcanite/60
+]
+
+research: {
+  parent: a11-pin
+}
+
+ammoTypes: {
+    a1-yttrium: {
+    type: shrapnelBulletType
+    lifetime: 19
+    damage: 28
+    serrations: 4
+    serrationSpacing: 16
+    serrationLenScl: 20
+    serrationWidth: 5
+    hitLarge: true
+    fromColor: abb3b3
+    toColor: e8eded
+    length: 100
+    width: 8
+    hitEffect: blastExplosion
+    shootEffect: blastExplosion
+    pierce: true
+    smokeEffect: hitBulletBig
+  }
+}
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -side
+    heatColor: ff0000
+    progress: recoil
+    heatProgress: recoil
+    mirror: true
+      }
+    ]
+}

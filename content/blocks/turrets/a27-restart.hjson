@@ -1,0 +1,683 @@
+type: ItemTurret
+category: turret
+name: Restart
+description: A massive monstrosity of a turret a prototype weapon developed by the bushark faction.
+size: 16
+health: 7800
+range: 280
+squareSprite: false
+reload: 1000
+chargeSound: lasercharge2
+shootSound: restartCannon
+soundPitchMin: 0.8
+soundPitchMax: 0.8
+rotateSpeed: 0.25
+shootY: 0
+shake: 40
+heatColor: e0a0b9
+ammoPerShot: 20
+cooldownTime: 90
+recoil: 6
+shootWarmupSpeed: 0.02
+minWarmup: 0.95
+heatRequirement: 450
+maxHeatEfficiency: 1
+moveWhileCharging: false
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a25-frostbite
+}
+
+
+shoot: {
+type: shootPattern
+firstShotDelay: 200
+}
+ammoTypes: {
+//placeholder
+  b4-shavrite: {
+    sprite: frozen-farlands-star3
+    spin: -3
+    lightColor: 8aecff
+    hitColor: 8aecff
+    frontColor: 8aecff
+    backColor:  8aecff
+    trailColor: 8aecff
+    hitSound: largeExplosion
+    hitSoundVolume: 2
+    trailWidth: 8
+    shrinkY: 0
+    trailLength: 90
+    width: 48
+    height: 48
+    damage: 6500
+    splashDamage: 6500
+    splashDamageRadius: 100
+    speed: 18
+    trailInterval: 2
+    lifetime: 75
+    chargeEffect: [
+      {
+        type: ParticleEffect
+        particles: 50
+        length: 500
+        baseLength: -500
+        cone: 360
+        lifetime: 200
+        sizeFrom: 20
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        interp: pow10Out
+        sizeInterp: pow10In
+      }
+      {
+        type: ParticleEffect
+        particles: 50
+        length: -400
+        baseLength: 400
+        cone: 360
+        lifetime: 120
+        sizeFrom: 20
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        interp: pow10Out
+        sizeInterp: pow10In
+      }
+    ]
+    despawnHit: true
+    despawnEffect: [
+      {
+        type: ParticleEffect
+        particles: 120
+        length: 500
+        cone: 360
+        lifetime: 200
+        sizeFrom: 50
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        region: particle
+        interp: pow10Out
+        sizeInterp: pow10In
+      }
+      {
+        type: ParticleEffect
+        particles: 1
+        length: 0
+        cone: 360
+        lifetime: 40
+        sizeFrom: 99999
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        region: particle
+        interp: exp5
+        sizeInterp: pow10In
+      }
+      {
+        type: ParticleEffect
+        particles: 1
+        length: 0
+        cone: 360
+        lifetime: 200
+        sizeFrom: 90
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        region: particle
+        interp: pow10Out
+        sizeInterp: pow10In
+      }
+      {
+        type: ParticleEffect
+        particles: 4
+        length: 60
+        cone: 360
+        lifetime: 200
+        sizeFrom: 40
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        region: particle
+        interp: pow10Out
+        sizeInterp: pow10In
+      }
+      {
+        type: ParticleEffect
+        particles: 60
+        length: 500
+        cone: 360
+        lifetime: 200
+        sizeFrom: 50
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        interp: pow10Out
+        sizeInterp: pow10In
+      }
+      {
+        type: ParticleEffect
+        particles: 90
+        length: 500
+        cone: 360
+        lifetime: 200
+        sizeFrom: 30
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        region: particle
+        interp: pow10Out
+        sizeInterp: pow10In
+      }
+      {
+        type: ParticleEffect
+        particles: 90
+        length: 500
+        cone: 360
+        lifetime: 200
+        sizeFrom: 30
+        sizeTo: 0
+        colorFrom: ffffff80
+        colorTo: 8aecff80
+        interp: pow10Out
+        sizeInterp: pow10In
+      }
+    ]
+    fragBullets: 8
+    fragRandomSpread: 80
+    fragLifeMin: 0
+    fragBullet: {
+      sprite: frozen-farlands-star3
+      spin: -3
+      lightColor: 8aecff
+      hitColor: 8aecff
+      frontColor: 8aecff
+      backColor: 8aecff
+      trailColor: 8aecff
+      hitSound: plasmaboom
+      trailWidth: 8
+      shrinkY: 0
+      trailLength: 40
+      width: 24
+      height: 24
+      damage: 400
+      splashDamage: 400
+      splashDamageRadius: 50
+      speed: 6
+      trailInterval: 2
+      lifetime: 80
+      fragBullets: 2
+      fragRandomSpread: 80
+      fragLifeMin: 0
+      fragBullet: {
+        sprite: frozen-farlands-star3
+        spin: -3
+        lightColor: 8aecff
+        hitColor: 8aecff
+        frontColor: 8aecff
+        backColor: 8aecff
+        trailColor: 8aecff
+        hitSound: plasmaboom
+        trailWidth: 8
+        shrinkY: 0
+        trailLength: 40
+        width: 14
+        height: 14
+        damage: 200
+        splashDamage: 200
+        splashDamageRadius: 50
+        speed: 8
+        trailInterval: 2
+        lifetime: 40
+        fragBullets: 2
+        fragBullet: {
+          type: LaserBulletType
+          colors: [ 8aecff50, 8aecff, ffffff  ]
+          length: 500
+          width: 50
+          damage: 450
+          lifetime: 60
+          sideAngle: 75
+          sideWidth: 2
+          sideLength: 120
+          lightningSpacing: 18
+          lightningAngleRand: 12
+          lightningDelay: 0.8
+          lightningLength: 8
+          lightningLengthRand: 1.2
+          lightningDamage: 12
+          lightningColor: 8aecff
+        }
+      }
+    }
+    spawnBullets: [
+    {
+      sprite: frozen-farlands-star3
+      spin: -3
+      lightColor: 8aecff
+      hitColor: 8aecff
+      frontColor: 8aecff
+      backColor:  8aecff
+      trailColor: 8aecff
+      hitSound: dullExplosion
+      hitSoundVolume: 2
+      trailWidth: 2
+      shrinkY: 0
+      trailLength: 90
+      width: 12
+      height: 12
+      damage: 30
+      splashDamage: 30
+      splashDamageRadius: 20
+      speed: 6
+      trailInterval: 2
+      lifetime: 28
+      fragBullets: 2
+      fragRandomSpread: 2
+      fragSpread: 180
+      fragBullet: {
+         type: LaserBulletType
+         colors: [ 8aecff50, 8aecff, ffffff  ]
+         length: 150
+         width: 20
+         damage: 30
+         lifetime: 60
+         sideAngle: 75
+         sideWidth: 2
+         sideLength: 50
+         lightningSpacing: 30
+         lightningAngleRand: 12
+         lightningDelay: 0.8
+         lightningLength: 8
+         lightningLengthRand: 1.2
+         lightningDamage: 12
+         lightningType: {
+            type: LaserBulletType
+            colors: [ 8aecff50, 8aecff, ffffff  ]
+            length: 40
+            width: 10
+            damage: 30
+            lifetime: 60
+            sideAngle: 90
+            sideWidth: 2
+            sideLength: 50
+            lightningSpacing: 18
+            lightningAngleRand: 12
+            lightningDelay: 0.8
+            lightningLength: 8
+            lightningLengthRand: 1.2
+            lightningDamage: 12
+            lightningColor: 8aecff
+          }
+        }
+      }
+    {
+      sprite: frozen-farlands-star3
+      spin: -3
+      lightColor: 8aecff
+      hitColor: 8aecff
+      frontColor: 8aecff
+      backColor:  8aecff
+      trailColor: 8aecff
+      hitSound: dullExplosion
+      hitSoundVolume: 2
+      trailWidth: 2
+      shrinkY: 0
+      trailLength: 90
+      width: 12
+      height: 12
+      damage: 30
+      splashDamage: 30
+      splashDamageRadius: 20
+      speed: 6
+      trailInterval: 2
+      lifetime: 56
+      fragBullets: 2
+      fragRandomSpread: 2
+      fragSpread: 180
+      fragBullet: {
+         type: LaserBulletType
+         colors: [ 8aecff50, 8aecff, ffffff  ]
+         length: 150
+         width: 20
+         damage: 30
+         lifetime: 60
+         sideAngle: 75
+         sideWidth: 2
+         sideLength: 50
+         lightningSpacing: 30
+         lightningAngleRand: 12
+         lightningDelay: 0.8
+         lightningLength: 8
+         lightningLengthRand: 1.2
+         lightningDamage: 12
+         lightningType: {
+            type: LaserBulletType
+            colors: [ 8aecff50, 8aecff, ffffff  ]
+            length: 40
+            width: 10
+            damage: 30
+            lifetime: 60
+            sideAngle: 90
+            sideWidth: 2
+            sideLength: 50
+            lightningSpacing: 18
+            lightningAngleRand: 12
+            lightningDelay: 0.8
+            lightningLength: 8
+            lightningLengthRand: 1.2
+            lightningDamage: 12
+            lightningColor: 8aecff
+          }
+        }
+      }
+    {
+      sprite: frozen-farlands-star3
+      spin: -3
+      lightColor: 8aecff
+      hitColor: 8aecff
+      frontColor: 8aecff
+      backColor:  8aecff
+      trailColor: 8aecff
+      hitSound: dullExplosion
+      hitSoundVolume: 2
+      trailWidth: 2
+      shrinkY: 0
+      trailLength: 90
+      width: 12
+      height: 12
+      damage: 30
+      splashDamage: 30
+      splashDamageRadius: 20
+      speed: 6
+      trailInterval: 2
+      lifetime: 84
+      fragBullets: 2
+      fragRandomSpread: 2
+      fragSpread: 180
+      fragBullet: {
+         type: LaserBulletType
+         colors: [ 8aecff50, 8aecff, ffffff  ]
+         length: 150
+         width: 20
+         damage: 30
+         lifetime: 60
+         sideAngle: 75
+         sideWidth: 2
+         sideLength: 50
+         lightningSpacing: 30
+         lightningAngleRand: 12
+         lightningDelay: 0.8
+         lightningLength: 8
+         lightningLengthRand: 1.2
+         lightningDamage: 12
+         lightningType: {
+            type: LaserBulletType
+            colors: [ 8aecff50, 8aecff, ffffff  ]
+            length: 40
+            width: 10
+            damage: 30
+            lifetime: 60
+            sideAngle: 90
+            sideWidth: 2
+            sideLength: 50
+            lightningSpacing: 18
+            lightningAngleRand: 12
+            lightningDelay: 0.8
+            lightningLength: 8
+            lightningLengthRand: 1.2
+            lightningDamage: 12
+            lightningColor: 8aecff
+          }
+        }
+      }
+    {
+      sprite: frozen-farlands-star3
+      spin: -3
+      lightColor: 8aecff
+      hitColor: 8aecff
+      frontColor: 8aecff
+      backColor:  8aecff
+      trailColor: 8aecff
+      hitSound: dullExplosion
+      hitSoundVolume: 2
+      trailWidth: 2
+      shrinkY: 0
+      trailLength: 90
+      width: 12
+      height: 12
+      damage: 30
+      splashDamage: 30
+      splashDamageRadius: 20
+      speed: 6
+      trailInterval: 2
+      lifetime: 112
+      fragBullets: 2
+      fragRandomSpread: 2
+      fragSpread: 180
+      fragBullet: {
+         type: LaserBulletType
+         colors: [ 8aecff50, 8aecff, ffffff  ]
+         length: 150
+         width: 20
+         damage: 30
+         lifetime: 60
+         sideAngle: 75
+         sideWidth: 2
+         sideLength: 50
+         lightningSpacing: 30
+         lightningAngleRand: 12
+         lightningDelay: 0.8
+         lightningLength: 8
+         lightningLengthRand: 1.2
+         lightningDamage: 12
+         lightningType: {
+            type: LaserBulletType
+            colors: [ 8aecff50, 8aecff, ffffff  ]
+            length: 40
+            width: 10
+            damage: 30
+            lifetime: 60
+            sideAngle: 90
+            sideWidth: 2
+            sideLength: 50
+            lightningSpacing: 18
+            lightningAngleRand: 12
+            lightningDelay: 0.8
+            lightningLength: 8
+            lightningLengthRand: 1.2
+            lightningDamage: 12
+            lightningColor: 8aecff
+          }
+        }
+      }
+    {
+      sprite: frozen-farlands-star3
+      spin: -3
+      lightColor: 8aecff
+      hitColor: 8aecff
+      frontColor: 8aecff
+      backColor:  8aecff
+      trailColor: 8aecff
+      hitSound: dullExplosion
+      hitSoundVolume: 2
+      trailWidth: 2
+      shrinkY: 0
+      trailLength: 90
+      width: 12
+      height: 12
+      damage: 30
+      splashDamage: 30
+      splashDamageRadius: 20
+      speed: 6
+      trailInterval: 2
+      lifetime: 140
+      fragBullets: 2
+      fragRandomSpread: 2
+      fragSpread: 180
+      fragBullet: {
+         type: LaserBulletType
+         colors: [ 8aecff50, 8aecff, ffffff  ]
+         length: 150
+         width: 20
+         damage: 30
+         lifetime: 60
+         sideAngle: 75
+         sideWidth: 2
+         sideLength: 50
+         lightningSpacing: 30
+         lightningAngleRand: 12
+         lightningDelay: 0.8
+         lightningLength: 8
+         lightningLengthRand: 1.2
+         lightningDamage: 12
+         lightningType: {
+            type: LaserBulletType
+            colors: [ 8aecff50, 8aecff, ffffff  ]
+            length: 40
+            width: 10
+            damage: 30
+            lifetime: 60
+            sideAngle: 90
+            sideWidth: 2
+            sideLength: 50
+            lightningSpacing: 18
+            lightningAngleRand: 12
+            lightningDelay: 0.8
+            lightningLength: 8
+            lightningLengthRand: 1.2
+            lightningDamage: 12
+            lightningColor: 8aecff
+          }
+        }
+      }
+    ]
+  }
+}
+
+drawer: {
+  type: DrawTurret
+  parts: [
+     {
+      type: ShapePart
+      progress: warmup
+      colorFrom: ffffff00
+      colorTo: 8aecff
+      layer: 110
+      y: 0
+      circle: false
+      hollow: true
+      sides: 3
+      radiusFrom: 90
+      radiusTo: 70
+      stroke: -1
+      strokeTo: 5
+      rotateSpeed: 1.5
+      }
+      {
+      type: ShapePart
+      progress: warmup
+      colorFrom: ffffff00
+      colorTo: 8aecff
+      layer: 110
+      y: 0
+      circle: true
+      hollow: true
+      radiusFrom: 90
+      radiusTo: 70
+      stroke: -1
+      strokeTo: 5
+      rotateSpeed: 1.5
+      }
+      {
+       type: FlarePart
+       y: 50
+       progress: {
+         type: charge
+         op: delay
+         amount: 0.25
+       }
+       rotation: 90
+       sides: 4
+       color1: 8aecff
+       radius: 20
+       radiusTo: 0
+       followRotation: true
+       rotMove: 60
+      }
+      {
+       type: FlarePart
+       x: 50
+       progress: {
+         type: charge
+         op: delay
+         amount: 0.50
+       }
+       rotation: 90
+       sides: 4
+       color1: 8aecff
+       radius: 20
+       radiusTo: 0
+       followRotation: true
+       rotMove: 60
+      }
+      {
+       type: FlarePart
+       y: -50
+       progress: {
+         type: charge
+         op: delay
+         amount: 0.75
+       }
+       rotation: 90
+       sides: 4
+       color1: 8aecff
+       radius: 20
+       radiusTo: 0
+       followRotation: true
+       rotMove: 60
+      }
+      {
+       type: FlarePart
+       x: -50
+       progress: {
+         type: charge
+         op: delay
+         amount: 0.90
+       }
+       rotation: 90
+       sides: 4
+       color1: 8aecff
+       radius: 20
+       radiusTo: 0
+       followRotation: true
+       rotMove: 60
+      }
+      {
+       type: FlarePart
+       x: 0
+       progress: {
+         type: charge
+         op: curve
+         interp: exp5
+       }
+       rotation: 90
+       sides: 4
+       color1: 8aecff
+       radius: 0
+       radiusTo: 120
+       followRotation: true
+       rotMove: -60
+      }
+    ]
+  }

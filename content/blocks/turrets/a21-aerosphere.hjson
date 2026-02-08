@@ -1,0 +1,243 @@
+type: ItemTurret
+category: turret
+size: 4
+health: 2600
+reload: 20
+range: 350
+recoil: 1
+shake: 1
+shootSound: shootAlt
+rotateSpeed: 4.9
+cooldownTime: 10
+shootEffect: shootBigColor
+smokeEffect: shootSmokeDisperse
+recoils: 5
+targetGround: false
+targetAir: true
+shoot: {  
+type: ShootAlternate
+barrels: 5
+spread: 2
+shots: 4
+shotDelay: 25
+}
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a14-dragonfly
+}
+
+ammoTypes: {
+  b2-niobium: {
+    type: BasicBulletType
+    damage: 25
+    hitEffect: hitBulletColor
+    despawnEffect: hitBulletColor
+    trailRotation: true
+    trailEffect: disperseTrail
+    trailInterval: 2
+    speed: 10
+    lifetime: 35
+    trailLength: 3
+    trailWidth: 4
+    width: 10
+    height: 12
+    frontColor: ffffff
+    backColor: b3a7c4
+    trailColor: b3a7c4
+    hitColor: b3a7c4
+    knockback: 0.1
+    trailEffect: disperseTrail
+    trailInterval: 4
+    trailRotation: true
+    collidesAir: true
+    collidesGround: false
+    collidesTiles: false
+    fragBullets: 3
+    ammoMultiplier: 6
+    fragBullet: {
+        createChance: 0.4
+        pierceArmor: true
+        type: BasicBulletType
+        damage: 12
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        trailRotation: true
+        trailEffect: disperseTrail
+        trailInterval: 2
+        speed: 4
+        pierce: true
+        lifetime: 5
+        trailLength: 6
+        trailWidth: 4
+        width: 10
+        height: 12
+        frontColor: ffffff
+        backColor: b3a7c4
+        trailColor: b3a7c4
+        hitColor: b3a7c4
+        knockback: 0.1
+        trailEffect: disperseTrail
+        trailInterval: 4
+        trailRotation: true
+        collidesAir: true
+        collidesGround: false
+        collidesTiles: false
+      }
+}
+b3-aerogel: {
+        type: FlakBulletType
+        sprite: missile-large
+        frontColor: ffffff
+        backColor: d9dfff
+        trailColor: d9dfff
+        hitColor: d9dfff
+        damage: 10
+        explodeRange: 40
+        speed: 10
+        ammoMultiplier: 8
+        lifetime: 35
+        explodeDelay: 1
+        splashDamage: 40
+        splashDamageRadius: 40
+        hitEffect:  {
+            type: MultiEffect
+            effects: [
+              {
+                type: ParticleEffect
+                particles: 12
+                lifetime: 20
+                lenFrom: 8
+                lenTo: 0
+                interp: pow10Out
+                randLength: false
+                length: 30
+                line: true
+                strokeFrom: 1
+                strokeTo: 0
+                colorFrom: d9dfff
+                colorTo: d9dfff
+                  }
+                  {
+                type: WaveEffect
+                colorFrom: d9dfff
+                colorTo: d9dfff
+                sizeTo: 30
+                strokeFrom: 10
+                strokeTo: 0
+                lifetime: 12
+                  }
+              ]
+                  }
+        trailEffect: disperseTrail
+        trailInterval: 4
+        trailRotation: true
+        collidesAir: true
+        collidesGround: false
+        collidesTiles: false
+        trailLength: 5
+        trailWidth: 4
+        height: 12
+        width: 10
+        fragBullets: 3
+        fragAngle: 180
+        fragRandomSpread: 0
+        fragSpread: 45
+        fragBullet: {
+            type: BasicBulletType
+            homingRange: 100
+            homingPower: 0.25
+            pierce: true
+            collidesGround: false
+            hitEffect: {
+                type: WaveEffect
+                sides: 5
+                strokeFrom: 4
+                strokeTo: 0
+                sizeTo: 8
+                colorTo: d9dfff
+                    }
+            sprite: circle-bullet
+            trailColor: d9dfff
+            frontColor: ffffff
+            backColor: d9dfff
+            despawnEffect: none
+            splashDamage: 35
+            splashDamageRadius: 8
+            damage: 6
+            speed: 5
+            lifetime: 20
+                }
+        }
+}
+
+
+
+drawer: {
+type: DrawTurret
+basePrefix: heated-
+parts: [
+    {
+      type: RegionPart
+      suffix: -barrel1
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -2
+      recoilIndex: 0
+    }
+    {
+      type: RegionPart
+      suffix: -barrel2
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -2
+      recoilIndex: 1
+    }
+    {
+      type: RegionPart
+      suffix: -barrel3
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -2
+      recoilIndex: 2
+    }
+    {
+      type: RegionPart
+      suffix: -barrel4
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -2
+      recoilIndex: 3
+    }
+    {
+      type: RegionPart
+      suffix: -barrel5
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -2
+      recoilIndex: 4
+    }
+{
+type: RegionPart
+suffix: -glow
+blending: additive
+color: ff000000
+colorTo: ff0000ff
+mixColor: ff000000
+colorTo: ff0000ff
+progress: warmup
+}
+  ]
+  }

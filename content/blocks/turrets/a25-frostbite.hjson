@@ -1,0 +1,473 @@
+type: LaserTurret
+category: turret
+size: 6
+health: 2200
+range: 390
+rotateSpeed: 1.2
+reload: 690
+xRand: 0
+shake: 40
+recoil: 3
+shootSound: laserbig
+chargeSound: lasercharge2
+cooldownTime: 650
+minWarmup: 0.95
+shootWarmupSpeed: 0.06
+shoot: {
+  type: shootSine
+  firstShotDelay: 120
+}
+consumes: {
+  power: 16
+}
+coolant: {
+  type: ConsumeLiquid
+  liquid: xenon
+  amount: 0.8
+  }
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a22-alectro
+}
+
+shootType: {
+  type: ContinuousFlameBulletType
+  colors: [ 8aecff50, 8aecff, ffffff  ]
+  length: 580
+  width: 40
+  damage: 80
+  lifetime: 300
+  flareColor: 8aecff
+  hitColor: 8aecff
+  flareLength: 90
+  flareWidth: 9
+  despawnShake: 25
+  spawnBullets: [
+  {
+    instantDisappear: true
+    fragBullets: 6
+    fragRandomSpread: 25
+    fragLifeMin: 0
+    fragBullet: {
+    type: BasicBulletType
+    speed: 8
+    lifetime: 70
+    damage: 20
+    width: 10
+    height: 14
+    frontColor: ffffff
+    backColor: 8aecff
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+    ammoMultiplier: 4
+    collidesTiles: true
+    hitEffect: pointHit
+    trailLength: 3
+    trailWidth: 2
+    trailColor: 8aecff
+    trailEffect: {
+    type: ParticleEffect
+    particles: 1
+    length: 10
+    lifetime: 15
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: ffffff
+    colorTo: 8aecff
+    region: particle
+  }
+  }
+  }
+  ]
+  chargeEffect: [
+           {
+           type: ParticleEffect
+           particles: 90
+           length: 60
+           baseLength: -60
+           baseRotation: -180
+           lifetime: 90
+           line: true
+           lenTo: 0
+           lenFrom: 12
+           strokeTo: 0
+           strokeFrom: 4
+           colorFrom: 8aecff
+           colorTo: 8aecff
+           interp: swingIn
+           sizeInterp: exp5Out
+          }
+          {
+           type: ParticleEffect
+           particles: 80
+           length: 190
+           baseLength: -190
+           baseRotation: -180
+           lifetime: 90
+           line: true
+           lenTo: 0
+           lenFrom: 7
+           strokeTo: 0
+           strokeFrom: 3
+           colorFrom: 8aecff
+           colorTo: 8aecff
+           interp: exp10
+           sizeInterp: exp10Out
+          }
+           {
+           type: ParticleEffect
+           particles: 1
+           length: 0
+           cone: 0
+           lifetime: 118
+           sizeFrom: 0
+           sizeTo: 30
+           colorFrom: 8aecff
+           colorTo: 8aecff
+           region: particle
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+            {
+                "type": "WaveEffect",
+                "colorFrom": "8aecff",
+                "colorTo": "000000",
+                "sizeFrom": 600,
+                 strokeFrom: 8
+                 strokeTo: 8
+                "sizeTo": 0,
+                "lifetime": 190
+          }
+            {
+                "type": "WaveEffect",
+                "colorFrom": "8aecff",
+                "colorTo": "000000",
+                "sizeFrom": 600,
+                 strokeFrom: 8
+                 strokeTo: 8
+                "sizeTo": 0,
+                "lifetime": 160
+          }
+            {
+                "type": "WaveEffect",
+                "colorFrom": "8aecff",
+                "colorTo": "000000",
+                "sizeFrom": 600,
+                 strokeFrom: 8
+                 strokeTo: 8
+                "sizeTo": 0,
+                "lifetime": 130
+          }
+            {
+                "type": "WaveEffect",
+                "colorFrom": "8aecff",
+                "colorTo": "000000",
+                "sizeFrom": 600,
+                 strokeFrom: 8
+                 strokeTo: 8
+                "sizeTo": 0,
+                "lifetime": 80
+          }
+          {
+              type: ParticleEffect
+              particles: 1
+              lifetime: 190
+              length: 0
+              sizeFrom: 120
+              sizeTo: 0
+              colorFrom: 8aecff
+              colorTo: 8aecff00
+              interp: pow3Out
+              spin: -4
+              sizeInterp: pow2In
+              region: frozen-farlands-cryo-rune
+           }
+]
+     fragBullets: 1
+     fragRandomSpread: 12
+     fragBullet: {
+    type: LaserBulletType
+    colors: [8aecff60, 8aecff, ffffff]
+    width: 30
+    damage: 60
+    recoil: 12
+    hitEffect: hitLancer
+    sideAngle: 120
+    sideWidth: 1
+    sideLength: 190
+    lifetime: 40
+    drawSize: 400
+    length: 450
+    pierceCap: 5
+      lightningSpacing: 17
+      lightningAngleRand: 30
+      lightningDelay: 0.8
+      lightningLength: 8
+      lightningLengthRand: 1.2
+      lightningDamage: 8
+      lightningColor: 8aecff
+     }
+shootEffect: none
+intervalRandomSpread: 0
+bulletInterval: 5
+intervalBullet: {
+     instantDisappear: true
+     despawnShake: 12
+     fragBullets: 1
+     fragBullet: {
+    type: LaserBulletType
+    colors: [8aecff60, 8aecff, ffffff]
+    width: 30
+    damage: 20
+    recoil: 12
+    hitEffect: hitLancer
+    sideAngle: 175
+    sideWidth: 1
+    sideLength: 50
+    lifetime: 30
+    drawSize: 400
+    length: 220
+    pierceCap: 5
+      lightningSpacing: 17
+      lightningAngleRand: 30
+      lightningDelay: 0.8
+      lightningLength: 8
+      lightningLengthRand: 1.2
+      lightningDamage: 8
+      lightningColor: 8aecff
+     }
+    "despawnEffect": {
+        "type": "MultiEffect",
+        "effects": [
+             {
+              type: ParticleEffect
+              particles: 3
+              lifetime: 60
+              length: 30
+              sizeFrom: 5
+              sizeTo: 1
+              colorFrom: 8aecff00
+              colorTo: 8aecff
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: frozen-farlands-triangle
+           }
+           {
+           type: ParticleEffect
+           particles: 3
+           length: 20
+           cone: 20
+           lifetime: 200
+           sizeFrom: 24
+           sizeTo: 0
+           colorFrom: ffffff80
+           colorTo: 8aecff80
+           region: particle
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+           {
+           type: ParticleEffect
+           particles: 3
+           length: 100
+           cone: 20
+           lifetime: 200
+           sizeFrom: 9
+           sizeTo: 0
+           colorFrom: ffffff80
+           colorTo: 8aecff80
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+       ]
+    },
+  }
+}
+
+
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -segment
+      mirror: true
+      under: true
+      progress: charge
+      moveX: -1.6
+    }
+    {
+      type: RegionPart
+      suffix: -ring
+      mirror: true
+      under: true
+      progress: warmup
+      moveX: 8
+      moveRot: 90
+    }
+    {
+      type: RegionPart
+      suffix: -spine
+      mirror: true
+      under: true
+      progress: warmup
+      moveX: 5
+      x: 9
+      heatColor: 8aecff60
+      heatProgress: warmup
+      moveRot: -60
+    }
+    {
+      type: RegionPart
+      suffix: -spine
+      mirror: true
+      under: true
+      progress: warmup
+      moveX: 5
+      moveY: -2
+      x: 9
+      heatColor: 8aecff60
+      heatProgress: warmup
+      moveRot: -90
+    }
+    {
+      type: RegionPart
+      suffix: -spine
+      mirror: true
+      under: true
+      progress: warmup
+      moveX: 5
+      x: 9
+      moveY: -4
+      heatColor: 8aecff60
+      heatProgress: warmup
+      moveRot: -135
+    }
+    {
+      type: RegionPart
+      suffix: -wing
+      mirror: true
+      under: true
+      progress: charge
+      moveY: 1.6
+      moveRot: -5
+    }
+    {
+      type: RegionPart
+      suffix: -center
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -5
+    }
+    {
+      type: RegionPart
+      suffix: -reloader
+      mirror: false
+      under: true
+      progress: warmup
+      moveY: 2
+    }
+  {
+    type: FlarePart
+    y: -20
+    progress: {
+      type: warmup
+      interp: pow2In
+    }
+    rotation: 90
+    sides: 6
+    color1: 8aecff
+    radius: 0
+    radiusTo: 90
+    rotMove: 60
+  }
+  {
+    type: FlarePart
+    y: 20
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.0
+    }
+    rotation: 90
+    sides: 2
+    color1: 8aecff
+    radius: 0
+    radiusTo: 60
+    followRotation: true
+  }
+  {
+    type: FlarePart
+    y: 30
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.25
+    }
+    rotation: 90
+    sides: 2
+    color1: 8aecff
+    radius: 0
+    radiusTo: 60
+    followRotation: true
+  }
+  {
+    type: FlarePart
+    y: 40
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.5
+    }
+    rotation: 90
+    sides: 2
+    color1: 8aecff
+    radius: 0
+    radiusTo: 60
+    followRotation: true
+  }
+  {
+    type: FlarePart
+    y: 50
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.75
+    }
+    rotation: 90
+    sides: 2
+    color1: 8aecff
+    radius: 0
+    radiusTo: 60
+    followRotation: true
+  }
+  {
+    type: FlarePart
+    y: 60
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.99
+    }
+    rotation: 90
+    sides: 2
+    color1: 8aecff
+    radius: 0
+    radiusTo: 60
+    followRotation: true
+  }
+  ]
+}

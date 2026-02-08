@@ -1,0 +1,457 @@
+type: ItemTurret
+category: turret
+size: 8
+health: 5000
+reload: 90
+range: 350
+rotateSpeed: 2
+shake: 4
+shootSound: plasmaCannon
+recoil: 4
+shootEffect: shootTitan
+maxAmmo: 240
+ammoPerShot: 24
+consumeAmmoOnce: false
+shoot: {
+  shots: 4
+  shotDelay: 15
+}
+consumes: {
+  power: 16
+}
+coolant: {
+  type: ConsumeLiquid
+  amount: 2
+  liquid: resonating-fuel
+}
+heatColor: ff0000
+minWarmup: 0.95
+shootWarmupSpeed: 0.04
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a23-stormer
+}
+
+ammoTypes: {
+  a1-yttrium: {
+    type: BulletType
+    hitEffect: none
+    ammoMultiplier: 1
+    lifetime: 0
+    speed: 0
+    fragLifeMin: 1
+    fragVelocityMin: 1
+    fragBullets: 4
+    fragRandomSpread: 5
+    fragSpread: 10
+    despawnEffect: none
+    fragBullet: {
+      type: BulletType
+      layer: 95
+      parts: [
+      {
+      type: RegionPart
+      layer: 95
+      name: frozen-farlands-f11-yttrium-wall
+      moveRot: 420
+      progress: life
+      outline: false
+      }
+      {
+      type: ShapePart
+      layer: 94.9
+      x: -2
+      y: -2
+      color: 000000aa
+      moveRot: 420
+      progress: life
+      sides: 4
+      hollow: false
+      radius: 8
+      rotation: 45
+      }
+      ]
+      damage: 125
+      trailEffect: missileTrailShort
+      trailInterval: 4
+      trailColor: 6d717b
+      hitEffect: {
+        type: MultiEffect
+        effects: [
+{
+type: ParticleEffect
+particles: 6
+sizeFrom: 5
+sizeTo: 0
+interp: circleOut
+sizeInterp: circleIn
+length: 9
+lifetime: 55
+colorFrom: 6d717b
+colorTo: 6d717b
+}
+{
+type: RadialEffect
+effect: {
+  type: ParticleEffect
+  cone: 8
+  line: true
+  length: 12
+  particles: 9
+  lenFrom: 3
+  lenTo: 0
+  strokeFrom: 1
+  strokeTo: 0.5
+  interp: circleOut
+  sizeInterp: circleIn
+  lifetime: 30
+    }
+}
+{
+type: WaveEffect
+colorFrom: 6d717b
+colorTo: 6d717b
+sizeTo: 12
+lifetime: 12
+}
+]
+}
+      despawnEffect: none
+      splashDamage: 45
+      splashDamageRadius: 9
+      hitSound: boom
+      speed: 4
+      lifetime: 87.5
+      }
+}
+    b5-metallic-arcanthium: {
+      type: BulletType
+      layer: 95
+      rangeChange: 120
+      parts: [
+      {
+      type: RegionPart
+      layer: 95
+      name: frozen-farlands-f52-metallic-arcanthium-wall-large
+      moveRot: 640
+      progress: life
+      outline: false
+      }
+      {
+      type: ShapePart
+      layer: 94.9
+      x: -2
+      y: -2
+      color: 000000aa
+      moveRot: 640
+      progress: life
+      sides: 4
+      hollow: false
+      radius: 16
+      rotation: 45
+      }
+      ]
+      speed: 5
+      lifetime: 94
+      ammoMultiplier: 1
+      bulletInterval: 1
+      intervalAngle: 180
+      intervalRandomSpread: 0
+      intervalBullet: {
+        type: LightningBulletType
+        lightningLength: 6
+        lightningLengthRand: 2
+        lightningColor: ffe785
+        hitColor: ffe785
+        damage: 10  
+        hitEffect: hitLaserColor
+          }
+      hitEffect:{
+        type: MultiEffect
+        effects: [
+        {
+        type: WaveEffect
+        strokeFrom: 8
+        sizeTo: 16
+        strokeTo: 0
+        colorFrom: ffe785
+        colorTo: ffe785aa
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 300
+        sizeFrom: 6
+        sizeTo: 0
+        length: 20
+        colorFrom: ffe785
+        colorTo: ffe785aa
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 300
+        sizeFrom: 8
+        particles: 2
+        sizeTo: 0
+        length: 20
+        colorFrom: ffe785
+        colorTo: ffe785aa
+        }
+        ]
+        }
+        pierce: true
+        pierceCap: 2
+        lightning: 2
+        lightningColor: ffe785
+        damage: 245
+        splashDamage: 200
+        splashDamageRadius: 20
+        lightningLength: 3
+        lightningDamage: 24
+        despawnEffect: none
+        }
+  b6-crystal-resofuel: {
+      type: BulletType
+      layer: 95
+      parts: [
+      {
+      type: RegionPart
+      layer: 95
+      name: frozen-farlands-f42-crystal-resofuel-wall-large
+      moveRot: 420
+      progress: life
+      outline: false
+      }
+      {
+      type: ShapePart
+      layer: 94.9
+      x: -2
+      y: -2
+      color: 000000aa
+      moveRot: 420
+      progress: life
+      sides: 4
+      hollow: false
+      radius: 16
+      rotation: 45
+      }
+      ]
+      speed: 4
+      lifetime: 87.5
+      ammoMultiplier: 1
+      hitEffect:{
+        type: MultiEffect
+        effects: [
+        {
+        type: WaveEffect
+        strokeFrom: 22.5
+        sizeTo: 45
+        strokeTo: 0
+        colorFrom: ff0000
+        colorTo: ff0000aa
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 300
+        sizeFrom: 6
+        sizeTo: 0
+        length: 45
+        particles: 12
+        colorFrom: ff0000
+        colorTo: ff0000aa
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 300
+        sizeFrom: 8
+        particles: 6
+        sizeTo: 0
+        length: 45
+        colorFrom: ff0000
+        colorTo: ff0000aa
+        }
+        ]
+        }
+        lightning: 1
+        lightningColor: ff0000
+        lightningDamage: 18
+        damage: 120
+        splashDamage: 450
+        splashDamageRadius: 45
+        despawnEffect: none
+        fragBullets: 6
+        fragBullet: {
+          type: BasicBulletType
+          sprite: frozen-farlands-diamond-long
+          lifetime: 180
+          pierce: true
+          hitEffect: hitBulletColor
+          drag: 0.08
+          speed: 4
+          createChance: 0.8
+          lightning: 2
+          lightningColor: ff0000
+          despawnEffect: none
+          damage: 10
+          lightningDamage: 40
+          bulletInterval: 5
+          intervalBullets: 1
+          spin: 2
+          intervalBullet: {
+            type: LightningBulletType
+            damage: 12
+            lightningLength: 2
+            lightningColor: ff0000
+            hitColor: ff0000
+            despawnSound: zap
+              }
+          }
+        }
+c1-reinforced-cryofabric:{
+      type: BulletType
+      layer: 95
+      rangeChange: 350
+      reloadMultiplier: 0.1
+      hitSize: 24
+      parts: [
+      {
+      type: RegionPart
+      layer: 95
+      name: frozen-farlands-f63-reinforced-cryofabric-wall-huge
+      moveRot: 1080
+      progress: life
+      outline: false
+      }
+      {
+      type: ShapePart
+      layer: 94.9
+      x: -2
+      y: -2
+      color: 000000aa
+      moveRot: 1080
+      progress: life
+      sides: 4
+      hollow: false
+      radius: 24
+      rotation: 45
+      }
+      ]
+      speed: 8
+      lifetime: 87.5
+      ammoMultiplier: 1
+      hitEffect:{
+          type: MultiEffect
+          effects: [
+            {
+              type: RadialEffect
+              rotWithParent: false
+              effect: {
+                    type: ParticleEffect
+                    cone: 5
+                    particles: 25
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 120
+                    interp: pow10Out
+                    sizeInterp: pow5In
+                    colorFrom: dbfaffaa
+                    colorTo: dbfaffaa
+                      }
+            }
+              {
+                  type: WaveEffect
+                  sizeTo: 120
+                  strokeFrom: 5
+                  colorFrom: dbfaff
+                  colorTo: dbfaff
+                  lifetime: 100
+                    }
+            {
+                type: ParticleEffect
+                length: 80
+                colorFrom: dbfaffaa
+                colorTo: dbfaffaa
+                sizeFrom: 12
+                sizeTo: 0
+                interp: circleOut
+                particles: 5
+                startDelay: 5
+                lifetime: 160
+                sizeInterp: pow5In
+                  }
+                        {
+                type: ParticleEffect
+                length: 80
+                colorFrom: dbfaffaa
+                colorTo: dbfaffaa
+                sizeFrom: 8
+                sizeTo: 0
+                interp: circleOut
+                particles: 8
+                startDelay: 5
+                  lifetime: 150
+                sizeInterp: pow5In
+                  }
+                        {
+                type: ParticleEffect
+                length: 80
+                colorFrom: dbfaffaa
+                colorTo: dbfaffaa
+                sizeFrom: 6
+                sizeTo: 0
+                interp: circleOut
+                particles: 25
+                startDelay: 5
+                lifetime: 130
+                sizeInterp: pow5In
+                  }
+                        {
+                  type: WaveEffect
+                  sizeTo: 80
+                  strokeFrom: 10
+                  colorFrom: dbfaff
+                  colorTo: dbfaff
+                  lifetime: 15
+                  startDelay: 5
+                    }
+                    ]
+    }
+        damage: 1245
+        splashDamage: 850
+        splashDamageRadius: 80
+        despawnEffect: none
+        }
+}
+
+
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+}
+    smokeEffect: {
+      type: MultiEffect
+      effects: [shootSmokeSmite, {
+        type:  WaveEffect
+        sizeTo: 100
+        lifetime: 60
+        interp: circleOut
+        strokeFrom: 12
+        }
+      ]
+      }

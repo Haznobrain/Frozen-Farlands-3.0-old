@@ -1,0 +1,185 @@
+type: ItemTurret
+category: turret
+size: 5
+health: 5000
+reload: 600
+range: 800
+shootY: 20
+heatColor: ff0000
+shootSound: missileLaunch
+shootEffect: shootBig
+smokeEffect: shootSmokeMissile
+recoil: 0
+rotateSpeed: 0.9
+shootWarmupSpeed: 0.04
+minWarmup: 0.9
+ammoPerShot: 15
+shoot: {
+  firstShotDelay: 180
+}
+consumes: {
+  power: 4
+}
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a17-zap
+}
+
+ammoTypes: {
+  a2-arcanite: {
+      spawnUnit: stormer-arcanite-missile
+      chargeEffect: {
+          type: ParticleEffect
+          particles: 1
+          layer: 49
+          sizeFrom: 8
+          sizeTo: 8
+          cone: 0
+          rotWithParent: true
+          followParent: true
+          region: frozen-farlands-stormer-arcanite-missile
+          baseLength: -20
+          length: 20
+          randLength: false
+          lifetime: 180
+          offset: -90
+            }
+  }
+  b3-solid-hydrazine:{
+      spawnUnit: stormer-hydrazine-missile
+      chargeEffect: {
+          type: ParticleEffect
+          particles: 1
+          layer: 49
+          cone: 0
+          sizeFrom: 8
+          sizeTo: 8
+          rotWithParent: true
+          followParent: true
+          region: frozen-farlands-stormer-hydrazine-missile
+          baseLength: -20
+          length: 20
+          randLength: false
+          lifetime: 180
+          offset: -90
+          }
+  }
+}
+
+
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+    type: RegionPart
+    moveY: -4
+    moveX: 4
+    mirror: true
+    suffix: -tip
+    progress: {
+      type: charge
+      op: delay
+      amount: 0.8
+        }
+    heatProgress: recoil
+    moves: [
+      {
+    type: PartMove
+    x: 4
+    y: -4
+    progress: recoil
+      }
+          ]
+      }
+      {
+      type: RegionPart
+      suffix: -side
+      moveY: 2
+      progress: {
+        type: charge
+        op: delay
+        amount: 0.5
+          }
+      mirror: true
+      moves: [
+            {
+            type: PartMove
+            progress: recoil
+            rot: -5
+            }
+        ]
+      children: [
+{
+type: RegionPart
+suffix: -arrow-1
+mirror: true
+color: ffe78500
+colorTo: ffe785ff
+mixColor: ffe78500
+colorTo: ffe785ff
+progress: {
+  type: charge
+  op: delay
+  amount: 0.1
+    }
+blending: additive
+  }
+{
+type: RegionPart
+suffix: -arrow-2
+mirror: true
+color: ffe78500
+colorTo: ffe785ff
+mixColor: ffe78500
+colorTo: ffe785ff
+progress: {
+  type: charge
+  op: delay
+  amount: 0.3
+    }
+blending: additive
+  }
+{
+type: RegionPart
+suffix: -arrow-3
+mirror: true
+color: ffe78500
+colorTo: ffe785ff
+mixColor: ffe78500
+colorTo: ffe785ff
+progress: {
+  type: charge
+  op: delay
+  amount: 0.5
+    }
+blending: additive
+  }
+{
+type: RegionPart
+suffix: -arrow-4
+mirror: true
+color: ffe78500
+colorTo: ffe785ff
+mixColor: ffe78500
+colorTo: ffe785ff
+progress: {
+  type: charge
+  op: delay
+  amount: 0.8
+    }
+blending: additive
+  }
+    ]
+    }
+]
+}

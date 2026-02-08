@@ -1,0 +1,353 @@
+type: PowerTurret
+size: 6
+health: 3500
+reload: 120
+range: 340
+category: turret
+rotateSpeed: 1.6
+shake: 2
+shootSound: plasmaCannon
+recoil: 1
+shoot: {
+  type: ShootSine
+  scl: 8
+  mag: 35
+}
+consumes: {
+  power: 16
+}
+coolant: {
+  type: ConsumeLiquid
+  amount: 2
+  liquid: arcalith
+}
+heatColor: ffe785
+minWarmup: 0.95
+shootWarmupSpeed: 0.04
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a20-moonray
+}
+
+shootType: {
+    type: BasicBulletType
+    damage: 350
+    shootEffect: shootBigColor
+    smokeEffect: {
+      type: MultiEffect
+      effects: [
+{
+type: ParticleEffect
+cone: 10
+length: 100
+particles: 12
+sizeFrom: 7
+colorFrom: ffe785
+colorTo: a2a2a2
+lifetime: 90
+}
+        {
+type: ParticleEffect
+cone: 10
+length: 100
+particles: 20
+sizeFrom: 6
+colorFrom: ffe785
+colorTo: a2a2a2
+lifetime: 80
+}
+        {
+type: ParticleEffect
+cone: 10
+length: 100
+particles: 6
+sizeFrom: 10
+colorFrom: ffe785
+colorTo: a2a2a2
+lifetime: 100
+}
+{
+type: WaveEffect
+colorFrom: ffe785
+colorTo: a2a2a2
+lifetime: 30
+interp: circleOut
+sizeTo: 40
+strokeFrom: 8
+}
+  ]
+    }
+  hitEffect: {
+      type: MultiEffect
+      effects: [
+{
+type: ParticleEffect
+length: 100
+particles: 20
+sizeFrom: 7
+colorFrom: ffe785
+colorTo: a2a2a2
+lifetime: 90
+}
+        {
+type: ParticleEffect
+length: 100
+particles: 30
+sizeFrom: 6
+colorFrom: ffe785
+colorTo: a2a2a2
+lifetime: 80
+}
+        {
+type: ParticleEffect
+length: 100
+particles: 10
+sizeFrom: 10
+colorFrom: ffe785
+colorTo: a2a2a2
+lifetime: 100
+}
+{
+type: WaveEffect
+colorFrom: ffe785
+colorTo: a2a2a2
+lifetime: 30
+interp: circleOut
+sizeTo: 100
+strokeFrom: 16
+}
+  ]
+    }
+    splashDamage: 230
+    splashDamageRadius: 100
+    speed: 4
+    lifetime: 85
+    sprite: large-orb
+    trailLength: 6
+    trailWidth: 6
+    height: 24
+    width: 24
+    bulletInterval: 5
+    shrinkY: 0
+    intervalRandomSpread: 0
+    intervalBullet: {
+        type: BasicBulletType
+        sprite: frozen-farlands-diamond-long
+        backSprite: none
+        collides: false
+        collidesGround: true
+        collidesAir: true
+        damage: 5
+        splashDamage: 10
+        despawnEffect: none
+        hitEffect: none
+        shrinkY: 0
+        shrinkX: 1
+        rotationOffset: 90
+        collidesTiles: false
+        bulletInterval: 20
+        intervalBullets: 3
+        frontColor: ffe785
+        backColor: ffe785
+        lifetime: 120
+        speed: 0
+        intervalBullet: {
+          type: LightningBulletType
+          damage: 8
+          lightningLength: 6
+          lightningLengthRand: 5
+          lightningColor: ffe785
+          lifetime: 20
+          hitSound: zap
+          despawnHit: true
+            }
+        height: 24
+        width: 24
+          }
+    fragBullets: 1
+    fragRandomSpread: 0
+    fragBullet: {
+      type: BasicBulletType
+      collides: false
+      collidesTiles: false
+      collidesAir: false
+      damage: 100
+      splashDamage: 400
+      splashDamageRadius: 50
+      hitEffect: {
+        type: MultiEffect
+        effects:[ {
+          type: ParticleEffect
+          region: frozen-farlands-diamond-long
+          particles: 1
+          length: 0.001
+          spin: 5
+          lifetime: 50
+          offset: 90
+          colorFrom: ffe785
+          colorTo: ffe785
+          sizeFrom: 50
+          sizeTo: 0
+            }
+          {
+          type: ParticleEffect
+          region: frozen-farlands-diamond-long
+          particles: 1
+          length: 0.001
+          spin: 5
+          lifetime: 50
+          offset: 0
+          colorFrom: ffe785
+          colorTo: ffe785
+          sizeFrom: 50
+          sizeTo: 0
+            }
+          {
+          type: WaveEffect
+          sizeTo: 50
+          interp: circleOut
+          lifetime: 30
+          strokeFrom: 6
+          colorFrom:ffe785
+          colorTo: ffe785
+            }
+        ]
+      }
+      speed: 0
+      lifetime: 50
+      shrinkX: 0
+      shrinkY: 0
+      sprite: circle-bullet
+      frontColor: ffe785
+      backColor: ffe785
+      parts: [
+        {
+        type: RegionPart
+        moveRot: 720
+        name: frozen-farlands-tornado-center
+        color: ffe785
+        mixColor: ffe785
+        progress: life
+        xScl: 0.1
+        yScl: 0.1
+        growX: -1
+        growY: -1
+          }
+          ]
+      bulletInterval: 5
+      intervalBullets: 5
+      intervalBullet: {
+        type: BulletType
+        collides: false
+        collidesAir: false
+        collidesGround: false
+        collidesTiles: false
+        damage: 0
+        speed: 50
+        despawnEffect: hitSquaresColor
+        despawnSound: malignShoot
+        fragBullets: 3
+        fragAngle: 180
+        fragRandomSpread: 0
+        fragSpread: 45
+        fragOnHit: true
+        lifetime: 1
+        fragLifeMin: 1
+        fragVelocityMin: 1
+        fragBullet: {
+          type: BasicBulletType
+          speed: 5
+          lifetime: 10
+          homingPower: 0.05
+          damage: 15
+          width: 10
+          height: 12
+          trailLength: 4
+          trailWidth: 4
+          hitEffect: {
+            type: ExplosionEffect
+            waveColor: ffe785
+            smokeColor: ffe785
+            sparkColor: ffe785
+            waveLife: 12
+            smokes: 0
+            sparks: 12
+            sparkLen: 4
+            sparkRad: 30
+            waveRad: 30
+              }
+          despawnHit: true
+          despawnEffect: none
+          knockback: 1
+          frontColor: ffffff
+          backColor: ffe785
+          trailColor: ffe785
+          hitColor: ffe785
+            }
+      }
+    }
+  }
+
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+    type: RegionPart
+    suffix: -mandible
+    heatColor: ffe785
+    moveY: -4
+    progress: warmup
+    under: true
+    heatProgress: {
+      type: recoil
+      op: blend
+      other: warmup
+      amount: 0.9
+        }
+  }
+{
+    type: RegionPart
+    suffix: -glow
+    color: ffe78500
+    colorTo: ffe785ff
+    mixColor: ffe78500
+    mixColorTo: ffe785ff
+    blending: additive
+    progress: warmup
+      }
+{
+    type: RegionPart
+    suffix: -side
+    mirror: true
+    under: true
+    moveRot: -10
+    moveY: 1
+    progress: warmup
+    heatColor: ffe785
+    heatProgress: {
+      type: recoil
+      other: warmup
+      op: blend
+      amount: 0.4
+        }
+    moves: [
+        {
+        type: PartMove
+        rot: -20
+        y: 2
+        progress: reload
+          }
+        ]
+      }
+]
+}

@@ -1,0 +1,125 @@
+type: PowerTurret
+category: turret
+size: 3
+health: 900
+range: 440
+rotateSpeed: 1.2
+reload: 500
+shots: 1
+xRand: 0
+shake: 9
+recoilAmount: 3
+shootSound: plasmaCannon
+shoot: {
+  type: shootSine
+  firstShotDelay: 90
+}
+consumes: {
+  power: 16
+  liquids: [
+  xenon/0.8
+  ]
+}
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a13-pike
+}
+
+shootType: {
+  type: LaserBulletType
+  colors: [ 8aecff50, 8aecff, ffffff  ]
+  length: 400
+  width: 30
+  damage: 60
+  lifetime: 60
+  sideAngle: 175
+  sideWidth: 10
+  sideLength: 10
+      lightningSpacing: 18
+      lightningAngleRand: 12
+      lightningDelay: 0.8
+      lightningLength: 8
+      lightningLengthRand: 1.2
+      lightningDamage: 8
+      lightningColor: 8aecff
+      "shootEffect": {
+        "type": "MultiEffect",
+        "effects": [
+            {
+                "type": "WaveEffect",
+                "colorFrom": "8aecff",
+                "colorTo": "000000",
+                "sizeFrom": 1,
+                "sizeTo": 120,
+                "lifetime": 200
+            }
+             {
+              type: ParticleEffect
+              particles: 18
+              lifetime: 60
+              length: 30
+              cone: 20
+              sizeFrom: 5
+              sizeTo: 0
+              colorFrom: 8aecff00
+              colorTo: 8aecff
+              strokeFrom: 3
+              strokeTo: 1.5
+              interp: pow3Out
+              spin: 5
+              sizeInterp: pow2In
+              region: frozen-farlands-triangle
+           }
+           {
+           type: ParticleEffect
+           particles: 60
+           length: 120
+           cone: 20
+           lifetime: 100
+           sizeFrom: 10
+           sizeTo: 0
+           colorFrom: ffffff80
+           colorTo: 8aecff80
+           region: particle
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+           {
+           type: ParticleEffect
+           particles: 70
+           length: 120
+           cone: 20
+           lifetime: 110
+           sizeFrom: 5
+           sizeTo: 0
+           colorFrom: ffffff80
+           colorTo: 8aecff80
+           interp: pow10Out
+           sizeInterp: pow10In
+          }
+        ]
+    },
+}
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -front
+      mirror: false
+      under: true
+      progress: recoil
+      moveY: -3
+    }
+  ]
+}

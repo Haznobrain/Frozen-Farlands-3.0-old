@@ -1,0 +1,107 @@
+type: ContinuousLiquidTurret
+category: turret
+size: 3
+health: 1000
+minWarmup: 0.9
+shootWarmupSpeed: 0.1
+liquidCapacity: 100
+liquidConsumed: 0.8444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+loopSound: laserbeam
+shootSound: torch
+shootCone: 180
+aimChangeSpeed: 1.8
+rotateSpeed: 2.4
+shootY: 0
+range: 300
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a16-defragmentation
+}
+
+ammoTypes: {
+  cryofluid: {
+    type: PointLaserBulletType
+    damage: 10
+    status: freezing
+    color: ffffff
+    sprite: frozen-farlands-cryo-laser
+    hitColor: 6ecdec
+    buildingDamageMultiplier: 0.3
+    statusDuration: 120
+  }
+   xenon: {
+    type: PointLaserBulletType
+    damage: 20
+    status: none
+    color: ffffff
+    sprite: frozen-farlands-tractor-beam
+    hitColor: 6ecdec
+    buildingDamageMultiplier: 0.3
+    knockback: -2
+    impact: true
+    rangeChange: -120
+  }
+   arcalith: {
+    type: PointLaserBulletType
+    damage: 38
+    status: melting
+    statusDuration: 40
+    color: ffffff
+    sprite: frozen-farlands-heat-ray
+    hitColor: ff8634
+    buildingDamageMultiplier: 0.2
+    rangeChange: -160
+  }
+}
+
+drawer: {
+type: DrawTurret
+basePrefix: heated-
+parts: [
+  {
+type: RegionPart
+under: true
+moveY: 2
+moveX: -3
+suffix: -side
+under: true
+moves: [
+{
+type: PartMove
+y:-1
+progress: recoil
+}
+  ]
+progress: warmup
+mirror: true
+heatColor: ff0000
+  }
+{
+type: RegionPart
+under: true
+suffix: -barrel
+mirror: true
+heatColor: ff0000
+moveX: 2
+moveY: -2
+progress: warmup
+moves: [
+{
+type: PartMove
+y:-1
+progress: recoil
+}
+  ]
+heatProgress: recoil
+heatColor: ff0000
+  }
+]
+}

@@ -1,0 +1,150 @@
+type: LiquidTurret
+category: turret
+size: 2
+health: 1220
+range: 90
+squareSprite: false
+reload: 80
+shootSound: release
+inaccuracy: 0
+rotateSpeed: 1.6
+shootCone: 3
+shootY: 4
+outlineColor: 26262e
+shake: 2
+velocityRnd: 0
+shoot: {
+type: ShootSpread
+shots: 10
+spread: 4
+}
+
+requirements: [
+  a1-yttrium/40
+]
+
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: a15-tide
+}
+
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -side
+      mirror: true
+      under: true
+      progress: recoil
+      moveY: -1.2
+      moveX: 0.2
+    }
+  ]
+}
+ammoTypes: {
+  xenon: {
+    type: BasicBulletType
+    damage: 18
+    speed: 6
+    lifetime: 12.5
+    width: 14
+    hitSize: 7
+    knockback: 8
+    height: 8
+    shootEffect: shootSmallColor
+    smokeEffect: none
+    ammoMultiplier: 1
+    buildingDamageMultiplier: 0.3
+    pierceCap: 2
+    pierce: true
+    pierceBuilding: true
+    hitColor: 4283b8
+    trailColor: 4283b8
+    frontColor: 4283b8
+    lightColor: 4283b8
+    backColor: 4283b8
+    trailWidth: 0
+    trailLength: 0
+    buildingDamageMultiplier: 0.2
+    trailEffect: {
+        type: ParticleEffect
+        particles: 3
+        cone: 360
+        lifetime: 30
+        sizeInterp: pow2Out
+        lightColor: 4283b8
+        colorFrom: 4283b8
+        colorTo: 4283b800
+        sizeFrom: 4
+        sizeTo: 0
+    }
+    fragBullets: 1
+    trailInterval: 1
+    fragBullet: {
+    type: LiquidBulletType
+    liquid: xenon
+    lifetime: 4
+    trailColor: 82beff
+    speed: 0
+    puddleSize: 8
+    orbSize: 4
+    drag: 0.001
+    damage: 0
+    }
+  }
+    ionized-xenon: {
+    type: BasicBulletType
+    damage: 38
+    speed: 6
+    lifetime: 12.5
+    width: 14
+    hitSize: 7
+    knockback: 12
+    height: 8
+    shootEffect: shootSmallColor
+    smokeEffect: none
+    ammoMultiplier: 1.5
+    buildingDamageMultiplier: 0.3
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true
+    hitColor: 8fdbff
+    trailColor: 8fdbff
+    frontColor: 8fdbff
+    lightColor: 8fdbff
+    backColor: 8fdbff
+    trailWidth: 0
+    trailLength: 0
+    buildingDamageMultiplier: 0.2
+    trailEffect: {
+        type: ParticleEffect
+        particles: 3
+        cone: 360
+        lifetime: 30
+        sizeInterp: pow2Out
+        lightColor: 8fdbff
+        colorFrom: 8fdbff
+        colorTo: 8fdbff00
+        sizeFrom: 4
+        sizeTo: 0
+    }
+    fragBullets: 1
+    trailInterval: 1
+    fragBullet: {
+    type: LiquidBulletType
+    liquid: ionized-xenon
+    lifetime: 4
+    trailColor: b5eeff
+    speed: 0
+    puddleSize: 8
+    orbSize: 4
+    drag: 0.001
+    damage: 0
+    }
+  }
+}
