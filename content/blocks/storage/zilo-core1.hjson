@@ -1,0 +1,18 @@
+type: CoreBlock
+health: 2500
+size: 4
+absorbLasers: true
+itemCapacity: 5000
+unitCapModifier: 12
+unitType: coreflare1
+requirements: [
+  a1-yttrium/50
+]
+category: effect
+  research: {
+  root: true
+  name: Zilo
+  requiresUnlock: false
+  planet: frozen-farlands-Zilo
+  }
+alwaysUnlocked: true
