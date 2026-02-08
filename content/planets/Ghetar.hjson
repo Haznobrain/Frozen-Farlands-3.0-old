@@ -1,0 +1,54 @@
+    generator: "AsteroidGenerator",
+    parent: "serpulo",
+    iconColor: 1a236e,
+    orbitRadius: 12,
+    hasAtmosphere: false,
+    updateLighting: false,
+    drawOrbit: false,
+    accessible: true,
+    alwaysUnlocked: true,
+    defaultCore: "zilo-core1",
+    clearSectorOnLose: true,
+    allowSectorInvasion: false,
+	allowLaunchToNumbered: false,
+    radius: 1,
+    hiddenItems: [
+        "copper",
+        "lead",
+        "scrap",
+        "graphite",
+        "coal",
+        "titanium",
+        "thorium",
+        "silicon",
+        "plastanium",
+        "phase-fabric",
+        "surge-alloy",
+        "spore-pod",
+        "sand",
+        "blast-compound",
+        "pyratite",
+        "metaglass",
+        "beryllium",
+        "oxide",
+        "tungsten",
+        "carbide",
+        "fissile-matter",
+        "dormant-cyst"
+    ],
+mesh: {
+  type: NoiseMesh
+  divisions: 3
+  radius: 0.1
+  planet: 1
+  color1: 131316
+  color2: 0a8bc7
+  octaves: 4
+  persistence: 0.2
+  scale: 1.1
+  mag: 5
+  coct: 4
+  cper: 1.4
+  cscl: 0.3
+  cthresh: 0.01
+  }
