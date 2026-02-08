@@ -1,0 +1,54 @@
+type: Wall
+category: defense
+health: 720
+size: 1
+destroyBulletSameTeam: true
+destroyBullet: {
+  type: BulletType
+  lifetime: 0
+  speed: 0
+  despawnEffect: none
+  hitEffect: none
+  fragBullets: 4
+  fragBullet: {
+  type: BasicBulletType
+  createChance: 0.6
+  hitColor: ff0000
+  pierce: true
+  lifetime: 45
+  damage: 5
+  status: s2-resonating-cascade-failure
+  statusDuration: 60
+  hitEffect: hitBulletColor
+  frontColor: ff0000
+  backColor: ff0000
+  despawnEffect: none
+  despawnHit: true
+  bulletInterval: 5
+  intervalBullets: 1
+  intervalBullet: {
+    type: LightningBulletType
+    damage: 1
+    lightningColor: ff0000
+    lightningLength: 2
+    lifetime: 15
+    }
+  sprite: frozen-farlands-diamond-long
+  speed: 4
+  drag: 0.09
+  trailColor: ff0000
+  trailInterval: 4
+  }
+}
+requirements: [
+  b6-crystal-resofuel/4
+  a3-ice-shard/2
+]
+researchCost: [
+  b6-crystal-resofuel/40
+  a3-ice-shard/20
+]
+
+research: {
+  parent: f21-cryogenium-wall
+}

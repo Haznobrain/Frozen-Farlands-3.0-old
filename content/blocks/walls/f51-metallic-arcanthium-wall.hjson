@@ -1,0 +1,26 @@
+type: ShieldWall
+health: 950
+shieldHealth: 250
+breakCooldown: 300
+regenSpeed: 1
+glowColor: ffe785ff
+lightningDamage: 50
+lightningColor: ffe785ff
+lightningChance: 0.1
+lightningLength: 28
+hasPower: true
+conductivePower: true
+category: defense
+requirements: [
+  b5-metallic-arcanthium/6
+]
+consumes: {
+  power: 0.1
+}
+researchCost: [
+    b5-metallic-arcanthium/200
+]
+
+research: {
+  parent: f41-crystal-resofuel-wall
+}

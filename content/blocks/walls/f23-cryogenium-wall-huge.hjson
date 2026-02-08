@@ -1,0 +1,51 @@
+type: PowerTurret
+category: defense
+health: 5400
+size: 3
+reload: 5
+drawer: {
+  type: DrawRegion
+}
+shootSound: none
+shootY: 0
+requirements: [
+  a4-cryogenium/35
+  a3-ice-shard/15
+]
+researchCost: [
+  a4-cryogenium/400
+  a3-ice-shard/200
+]
+range: 48
+shootCone: 360
+shootType: {
+  type: BasicBulletType
+  collides: false
+  lifetime: 0
+  speed: 0
+  splashDamage: 0
+  status: s1-cryoslowed
+  statusDuration: 120
+  despawnEffect: none
+  hitEffect: none
+  splashDamageRadius: 48
+  shootEffect: {
+  type: ParticleEffect
+  length: 48
+  particles: 15
+  line: true
+  colorFrom: 94fff6
+  colorTo: 94fff600
+  lenFrom: 2
+  lenTo: 0
+  strokeFrom: 1
+  strokeTo: 0
+  lifetime: 30
+  randLength: false
+  interp: circleOut
+    }
+  smokeEffect: none
+}
+research: {
+  parent: f22-cryogenium-wall-large
+}

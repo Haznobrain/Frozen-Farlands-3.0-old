@@ -1,0 +1,54 @@
+type: Wall
+category: defense
+health: 2880
+size: 2
+destroyBulletSameTeam: true
+destroyBullet: {
+  type: BulletType
+  lifetime: 0
+  speed: 0
+  despawnEffect: none
+  hitEffect: none
+  fragBullets: 6
+  fragBullet: {
+  type: BasicBulletType
+  createChance: 0.6
+  pierce: true
+  frontColor: ff0000
+  backColor: ff0000
+  hitColor: ff0000
+  lifetime: 60
+  damage: 3
+  status: s2-resonating-cascade-failure
+  statusDuration: 90
+  hitEffect: hitBulletColor
+  despawnEffect: none
+  despawnHit: true
+  bulletInterval: 5
+  intervalBullets: 1
+  intervalBullet: {
+    type: LightningBulletType
+    damage: 1
+    lightningColor: ff0000
+    lightningLength: 2
+    lifetime: 15
+    }
+  sprite: frozen-farlands-diamond-long
+  speed: 4
+  drag: 0.09
+  trailColor: ff0000
+  trailInterval: 4
+  }
+}
+requirements: [
+  b6-crystal-resofuel/16
+  a3-ice-shard/8
+]
+researchCost: [
+  b6-crystal-resofuel/180
+  a3-ice-shard/60
+]
+
+research: {
+  parent: f41-crystal-resofuel-wall
+}

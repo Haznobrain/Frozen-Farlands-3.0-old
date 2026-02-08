@@ -1,0 +1,22 @@
+type: BaseShield
+size: 1
+drawer: {
+  type: DrawRegion
+    }
+health: 850
+radius: 8
+consumes: {
+  power: 0.5
+    }
+sides: 8
+requirements: [
+    c1-reinforced-cryofabric/10
+    b2-niobium/2
+    b3-aerogel/4
+      ]
+category: defense
+conductivePower: true
+
+research: {
+  parent: f31-aerogel-wall
+}

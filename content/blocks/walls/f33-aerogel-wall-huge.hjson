@@ -1,0 +1,18 @@
+type: Wall
+category: defense
+health: 8100
+size: 3
+
+requirements: [
+  b3-aerogel/36
+  b2-niobium/18
+]
+researchCost: [
+  b3-aerogel/360
+  b2-niobium/180
+]
+
+research: {
+  parent: f32-aerogel-wall-large
+}
+absorbLasers: true

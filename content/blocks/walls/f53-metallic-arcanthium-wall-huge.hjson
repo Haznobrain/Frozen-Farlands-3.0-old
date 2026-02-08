@@ -1,0 +1,28 @@
+type: ShieldWall
+health: 8550
+size: 3
+shieldHealth: 2250
+breakCooldown: 300
+regenSpeed: 9
+glowColor: ffe785ff
+lightningDamage: 50
+lightningColor: ffe785ff
+lightningChance: 0.11
+lightningLength: 28
+hasPower: true
+conductivePower: true
+category: defense
+requirements: [
+  b5-metallic-arcanthium/54
+]
+consumes: {
+  power: 0.9
+}
+research: f42-metallic-arcanthium-wall-large
+researchCost: [
+  b5-metallic-arcanthium/1800
+]
+
+research: {
+  parent: f52-metallic-arcanthium-wall-large
+}
