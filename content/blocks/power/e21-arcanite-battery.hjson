@@ -1,0 +1,20 @@
+type: battery
+size: 2
+	"fullLightColor": "79F2EEFF",
+	"emptyLightColor": "565666FF",
+	"hasPower": true,
+	"outputsPower": true,
+	"consumesPower": true,
+	"hasItems": false,
+canOverdrive: false
+consumes: {
+    powerBuffered: 2000
+}
+category: power
+requirements: [
+  a2-arcanite/50
+]
+research: e11-low-voltage-node
+researchCost: [
+    a2-arcanite/150
+    ]

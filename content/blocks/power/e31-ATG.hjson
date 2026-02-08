@@ -1,0 +1,87 @@
+type: ConsumeGenerator
+size: 1
+hasLiquids: false
+canOverdrive: false
+itemDuration: 240
+baseExplosiveness: 0
+consumes: {
+    items: [
+    a2-arcanite/1
+    ]
+}
+generateEffectRange: 1
+effectChance: 0.20
+generateEffect: {
+    type: RadialEffect
+    layer: 110
+    rotationSpacing: 0
+    amount: 1
+    lengthOffset: 0
+    effect: {
+      particles: 1
+      length: 20
+      lifetime: 40
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 2
+      sizeTo: 0
+      colorFrom: fff0b8
+      colorTo: d95e2e
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 110
+    }
+  }
+powerProduction: 0.75
+category: power
+requirements: [
+  a2-arcanite/20
+  a1-yttrium/5
+]
+research: {
+    parent: zilo-core1
+    objectives: [
+        {
+            type: OnSector
+            preset: FF-01-Exodus
+        }
+    ]
+}
+researchCost: [
+    a2-arcanite/80
+    a1-yttrium/20
+    ]
+
+drawer: {
+type: DrawMulti
+  drawers: [
+  {
+  type: DrawRegion
+  suffix: -bottom
+  }
+  {
+  type: DrawCrucibleFlame
+  circleSpace: 1
+  circleStroke: 2
+  flameRad: 1
+  flameRadiusScl: 3
+  flameRadiusMag: 1
+	flameColor: fa7020
+  particleLife: 80
+  particleRad: 3.6
+  particles: 15
+  particleSize: 2
+  rotateScl: 0.5
+  }
+  {
+  type: DrawDefault
+  }
+  {
+  type: DrawGlowRegion
+  suffix: -glow
+  glowScale: 9
+  color: c22d2d
+  }
+  ]
+  }

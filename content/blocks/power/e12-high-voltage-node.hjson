@@ -1,0 +1,26 @@
+type: PowerNode
+category: power
+health: 160
+size: 2
+fogRadius: 2
+hasPower: true
+outputsPower: true
+underBullets: true
+laserColor1: ffb275
+laserColor2: c14537
+maxNodes: 14
+laserRange: 16
+laserScale: 0.6
+
+requirements: [
+  a2-arcanite/18
+  b2-niobium/10
+]
+researchCost: [
+  a2-arcanite/200
+  b2-niobium/100
+]
+
+research: {
+  parent: e11-low-voltage-node
+}

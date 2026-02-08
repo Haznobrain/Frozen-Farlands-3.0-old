@@ -1,0 +1,84 @@
+type: ConsumeGenerator
+size: 3
+hasLiquids: true
+liquidCapacity: 60
+itemDuration: 180
+drawer: {
+  type: DrawMulti
+  iconOverride: [
+      -icon
+      ]
+  drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+  }
+{
+  type: DrawLiquidTile
+  padding: 1
+  drawLiquid: arcalith
+    }
+{
+  type: DrawPistons
+  sides: 8
+  sinMag: 2.75
+  sinScl: 10
+  sideOffset: 1.57079633
+    }
+{
+  type: DrawRegion
+    }
+{
+  type: DrawGlowRegion
+  color: ffe785ff
+  glowScale: 30
+    }
+]
+}
+consumes: {
+    "items": [
+    a4-cryogenium/1
+    ]
+    liquids: [
+      arcalith/0.2
+    ]
+}
+generateEffectRange: 1
+effectChance: 0.025
+generateEffect: {
+    type: RadialEffect
+    layer: 118
+    rotationSpacing: 45
+    amount: 8
+    lengthOffset: 6
+    effect: {
+      particles: 1
+      length: 90
+      lifetime: 400
+      cone: 20
+      baseRotation: 32
+      useRotation: false 
+      sizeFrom: 0
+      sizeTo: 12
+      colorFrom: e0e0e066
+      colorTo: e0e0e000
+      sizeInterp: pow2Out
+      interp: pow2Out
+      layer: 111
+    }
+  }
+outputLiquid: water/0.5
+research: e21-ATG
+powerProduction: 10
+category: power
+baseExplosiveness: 0
+requirements: [
+    a1-yttrium/250
+    a2-arcanite/200
+    b2-niobium/50
+      ]
+  researchCost: [
+  a1-yttrium/600
+  a2-arcanite/350
+  b2-niobium/200
+    ]

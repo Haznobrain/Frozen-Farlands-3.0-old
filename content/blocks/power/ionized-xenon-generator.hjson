@@ -1,0 +1,54 @@
+type: ImpactReactor
+category: power
+size: 6
+health: 3200
+hasLiquids: true
+canOverdrive: false
+liquidCapacity: 120
+itemDuration: 240
+warmupSpeed: 0.005
+itemDuration: 60
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawPlasma
+      suffix: -plasma
+      plasmas: 4
+      plasma1: 96e7ff
+      plasma2: 4fa7ff
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      suffix: -glow 
+      glowScale: 10
+      color: 66B1FF
+      alpha: 1.5
+    }
+  ]
+}
+consumes: {
+  power: 24
+    liquids: [
+     ionized-xenon/0.3
+    ]
+}
+powerProduction: 80
+category: power
+requirements: [
+  a1-yttrium/1
+]
+
+researchCost: [
+  a1-yttrium/1
+    ]
+ambientSound: hum
+ambientSoundVolume: 1

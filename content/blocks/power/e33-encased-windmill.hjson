@@ -1,0 +1,53 @@
+type: ThermalGenerator
+size: 3
+powerProduction: 1.6667
+hasPower: true
+health: 270
+category: power
+attribute: wind
+displayEfficiency: false
+minEfficiency: -0.0001
+drawer: {
+type: DrawMulti
+drawers: [
+{
+type: DrawRegion
+suffix: -bottom
+}
+{
+type: DrawRegion
+suffix: -turbine-still
+}
+{
+type: DrawBlurSpin
+suffix: -turbine1
+rotateSpeed: -1
+blurThresh: 0.1
+rotation: 0
+}
+{
+type: DrawBlurSpin
+suffix: -turbine2
+rotateSpeed: -6
+blurThresh: 0.4
+rotation: 0
+}
+{
+type: DrawBlurSpin
+suffix: -turbine3
+rotateSpeed: -18
+blurThresh: 1.1
+rotation: 0
+}
+{
+type: DrawRegion
+}
+]
+}
+research: e31-ATG
+requirements: [
+  a1-yttrium/140
+  a3-ice-shard/60
+  a2-arcanite/50
+  b2-niobium/10
+    ]

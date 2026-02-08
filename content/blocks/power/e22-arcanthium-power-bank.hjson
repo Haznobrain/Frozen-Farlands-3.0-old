@@ -1,0 +1,24 @@
+type: battery
+size: 3
+	"fullLightColor": "c14537FF",
+	"emptyLightColor": "ffcca3FF",
+	"hasPower": true,
+	"outputsPower": true,
+	"consumesPower": true,
+	"hasItems": false,
+canOverdrive: false
+consumes: {
+    powerBuffered: 50000
+}
+category: power
+requirements: [
+  a2-arcanite/250
+  b2-niobium/120
+  b5-metallic-arcanthium/50
+]
+research: e12-arcanite-battery
+researchCost: [
+  a2-arcanite/2000
+  b2-niobium/1500
+  b5-metallic-arcanthium/250
+    ]

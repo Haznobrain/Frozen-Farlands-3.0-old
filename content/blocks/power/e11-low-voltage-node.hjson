@@ -1,0 +1,24 @@
+type: PowerNode
+category: power
+health: 50
+size: 1
+fogRadius: 1
+hasPower: true
+outputsPower: true
+underBullets: true
+laserColor1: ffb275
+laserColor2: c14537
+maxNodes: 6
+laserRange: 8
+laserScale: 0.4
+
+requirements: [
+  a2-arcanite/5
+]
+researchCost: [
+  a2-arcanite/20
+]
+
+research: {
+  parent: e21-ATG
+}
