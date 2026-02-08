@@ -1,0 +1,22 @@
+
+type: WallCrafter
+size: 2
+category: production
+drillTime: 120
+output: a3-ice-shard
+attribute: ice
+
+consumes: {
+  power: 0.5
+}
+
+requirements: [
+  a1-yttrium/30
+]
+researchCost: [
+  a1-yttrium/120
+]
+
+research: {
+  parent: b11-micro-drill
+}

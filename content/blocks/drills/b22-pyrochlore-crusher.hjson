@@ -1,0 +1,24 @@
+
+type: WallCrafter
+size: 2
+category: production
+drillTime: 120
+output: b1-pyrochlore
+attribute: pyrochlore
+
+consumes: {
+  power: 0.75
+}
+
+requirements: [
+  a1-yttrium/40
+  a2-arcanite/10
+]
+researchCost: [
+  a1-yttrium/160
+  a2-arcanite/40
+]
+
+research: {
+  parent: b21-ice-crusher
+}

@@ -1,0 +1,19 @@
+type: Drill
+hasLiquids: false
+size: 2
+itemCapacity: 5
+tier: 2
+drillTime: 320
+drawMineItem: false
+liquidBoostIntensity: 1
+requirements: [
+  a1-yttrium/5
+]
+category: production
+researchCost: [
+  a1-yttrium/20
+]
+
+research: {
+  parent: b11-micro-drill
+}
