@@ -1,0 +1,66 @@
+type: PowerTurret
+targetHealing: true
+targetGround: false
+targetAir: false
+size: 2
+reload: 120
+range: 150
+shootSound: laser
+rotateSpeed: 8
+targetPriority: weakest
+category: effect
+drawer: {
+type: DrawTurret
+basePrefix: effect-
+parts: [
+{
+type: RegionPart
+progress: warmup
+colorFrom: 84f49100
+colorTo: 84f491ff
+mixColorFrom: 84f49100
+mixColor: 84f491ff
+suffix: -glow
+blending: additive
+}
+]
+}
+shootType: {
+    type: PointBulletType
+    trailSpacing: 8
+    trailEffect: {
+        type: ParticleEffect
+        offset: 90
+        lifetime: 20
+        sizeFrom: 6
+        sizeTo: 0
+        colorFrom: 84f491
+        colorTo: 84f491
+        particles: 1
+        length: 0.001
+        region: frozen-farlands-diamond-long
+    }
+    damage: 0
+    healPercent: 12
+    hitEffect: {
+      type: WrapEffect
+      rotation: 12
+      effect: dynamicSpikes
+      color: 84f491
+        }
+    despawnEffect: none
+    collidesTeam: true
+    collides: true
+      }
+requirements: [
+    a1-yttrium/50
+    a2-arcanite/60
+      ]
+consumes: {
+    power: 1
+      }
+coolant: {
+  type: ConsumeLiquid
+  amount: 0.2
+  liquid: cryofluid
+    }

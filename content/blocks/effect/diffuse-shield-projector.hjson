@@ -1,0 +1,44 @@
+type: PointDefenseTurret
+category: effect
+range: 150
+color: dbfaffcc
+beamEffect: none
+shootSound: none
+reload: 1
+size: 3
+bulletDamage: 20
+rotateSpeed: 360
+shootLength: 0
+shootEffect: {
+  type: ParticleEffect
+  length: 0
+  layer: 125
+  lifetime: 60
+  sizeFrom: 150
+  sizeTo: 150
+  colorFrom: dbfaffbb
+  colorTo: dbfaffbb
+  particles: 1
+    }
+consumes: {
+  power: 10
+  liquids: [
+      cryofluid/0.2
+          ]
+    }
+health: 850
+drawer: {
+type: DrawDefault
+iconOverride: [
+  -icon
+    ]
+}
+research: reparator
+requirements: [
+    a1-yttrium/450
+    a2-arcanite/400
+    b3-aerogel/200
+    a4-cryogenium/300
+    c1-reinforced-cryofabric/80
+      ]
+retargetTime: 0

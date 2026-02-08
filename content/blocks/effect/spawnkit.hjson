@@ -1,0 +1,29 @@
+type: ConsumeGenerator
+category: effect
+health: 100
+size: 1
+createRubble: false
+hasShadow: false
+liquidCapacity: 0.1
+explodeOnFull: true
+outputLiquid: nitrogen/0.001
+explosionPuddleLiquid: nitrogen
+explosionPuddleRange: 40
+explosionPuddleAmount: 20
+explosionPuddles: 6
+explosionDamage: 1
+explosionShake: 0
+explosionRadius: 1
+rebuildable: false
+destroySound: malignShoot
+destroyBulletSameTeam: true
+destroyBullet: {
+  spawnUnit: poly-clone
+}
+
+requirements: [
+  lead/16
+]
+researchCost: [
+  lead/750
+]
