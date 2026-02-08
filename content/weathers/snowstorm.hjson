@@ -1,0 +1,19 @@
+type: ParticleWeather
+color: b6e5f2
+noiseColor: b6e5f2
+particleRegion: particle
+sizeMax: 12
+sizeMin: 3
+density: 1200
+status: freezing
+useWindVector: true
+drawNoise: true
+opacityMultiplier: 0.60
+baseSpeed: 7
+sound: windhowl
+soundVol: 1
+force: 1
+attrs: {
+  light: -0.5
+  wind: 1
+}
