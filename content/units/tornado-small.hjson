@@ -1,0 +1,57 @@
+flying: true
+drag: 0.05
+speed: 3.0
+rotateSpeed: 15
+accel: 0.1
+range: 130
+health: 400
+engineOffset: 6.5
+hitSize: 9
+lowAltitude: true
+itemCapacity: 10
+outlineColor: 21252a
+
+weapons: [
+{
+name: a
+x: 0
+y: 0
+top: false
+rotate: false
+reload: 240
+recoil: 1
+layerOffset: -1
+shootSound: wind
+ejectEffect: none
+    bullet: { 
+      type: BasicBulletType
+      width: 80
+      height: 80
+      shrinkY: -10
+      shrinkX: -10
+      mixColor: ffffff
+      backColor: ffffff
+      frontColor: ffffff
+      lifetime: 1200
+      speed: 0.7
+      layer: 111
+      sprite: frozen-farlands-tornado-center
+      spin: -10
+    trailWidth: 0
+    trailLength: 0
+    trailInterval: 1
+    trailEffect: {
+					type: ParticleEffect
+					cone: 360
+					lifetime: 40
+					baseLength: -5
+					particles: 15
+					length: 145
+					sizeFrom: 13
+					sizeTo: 0
+					colorFrom: ffffff00
+					colorTo: ffffff
+				}
+    }
+}
+]

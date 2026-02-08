@@ -1,0 +1,126 @@
+flying: false
+type: mech
+drag: 0.3
+speed: 0.6
+rotateSpeed: 2.9
+accel: 0.4
+range: 250
+health: 11000
+armor: 16
+engineOffset: 6.5
+hitSize: 35
+itemCapacity: 10
+mechFrontSway: 0.3
+mechSideSway: 0.3
+mechStepParticles: true
+stepShake: 0.5
+outlineColor: 252529
+
+weapons: [
+{
+name: attack-mech-t4-weapon
+top: false
+mirror: true
+alternate: false
+y: 0
+x: 16
+shootX: 0
+reload: 40
+ejectEffect: none
+recoil: 2
+shootSound: largeCannon
+inaccuracy: 0
+alternate: true
+shootStatus: slow
+shootY: 13
+
+bullet: {
+    type: FlakBulletType
+    collidesGround: true
+    explodeRange: 15
+    explodeDelay: 0
+    frontColor: 363b42
+    backColor: 292c31
+    layer: 99
+    trailColor: 292c31
+    splashDamage: 120
+    splashDamageRadius: 50
+    damage: 10
+    trailLength: 50
+    lifetime: 50
+    speed: 5
+    hitSound: largeExplosion
+    width: 20
+    height: 24
+    trailParam: 3
+    hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: WaveEffect
+        colorFrom: 292c31
+        colorTo: 292c31
+        sizeFrom: 50
+        sizeTo: 50
+        strokeFrom: 0
+        strokeTo: 4
+        interp: slope
+        lifetime: 60
+        layer: 99
+        }
+        {
+        type: ParticleEffect
+        colorFrom: 292c31
+        colorTo: 292c31
+        sizeFrom: 12
+        particles: 10
+        length: 60
+        lifetime: 300
+        layer: 95
+        interp: pow10Out
+        sizeInterp: pow10In
+        }
+        {
+        type: ParticleEffect
+        colorFrom: ffb861
+        colorTo: ff8a66
+        sizeFrom: 8
+        particles: 16
+        length: 60
+        lifetime: 295
+        layer: 95
+        interp: pow10Out
+        sizeInterp: pow10In
+        }
+        {
+        type: ParticleEffect
+        colorFrom: 292c31
+        colorTo: 292c31dd
+        sizeFrom: 6
+        particles: 30
+        length: 60
+        lifetime: 300
+        layer: 95
+        interp: pow10Out
+        sizeInterp: pow10In
+        }
+        ]
+        }
+    despawnEffect: none
+    shootEffect: shootTitan
+    smokeEffect:   {
+        type: ParticleEffect
+        colorFrom: 292c31
+        colorTo: 292c31
+        sizeFrom: 7
+        particles: 8
+        length: 50
+        lifetime: 140
+        layer: 95
+        cone: 15
+        interp: pow10Out
+        sizeInterp: pow10In
+        }
+    }
+}
+]

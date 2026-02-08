@@ -1,0 +1,27 @@
+type: tank
+speed: 2
+controller: HugAI
+hitSize: 10
+omniMovement: false
+rotateSpeed: 2.1
+health: 360
+armor: 1
+faceTarget: false
+outlineColor: 3a3743
+abilities: [
+{
+type: EnergyFieldAbility
+damage: 5
+reload: 120
+range: 50
+status: none
+y: -1.5
+maxTargets: 5
+healPercent: 5
+sameTypeHealMult: 0.25
+effectRadius: 2.0
+sectors: 4
+sectorRad: 0.2
+color: 84f491
+}
+  ]

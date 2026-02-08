@@ -1,0 +1,137 @@
+type: missile
+speed: 5
+lifetime: 180
+missileAccelTime: 20
+health: 120
+rotateSpeed: 0.26
+maxRange: 6
+engineColor: b2c7d5
+trailColor: b2c7d5
+engineLayer: 100
+engineSize: 3.1
+engineOffset: 8
+flying: true
+physics: false
+trailLength: 16
+lowAltitude: true
+loopSound: missileTrail
+loopSoundVolume: 0.6
+fallSpeed: 60
+deathSound: largeExplosion
+targetAir: true
+targetUnderBlocks: false
+fogRadius: 3
+hoverable: false
+controllable: false
+playerControllable: false
+controller: MissileAI
+weapons: [
+  {
+  shootCone: 360
+  mirror: false
+  reload: 1
+  deathExplosionEffect: massiveExplosion
+  shootOnDeath: true
+  shake: 8
+  bullet: {
+    type: ExplosionBulletType
+    splashDamageRadius: 80
+    splashDamage: 1200
+    hitColor: b2c7d5
+    collidesAir: true
+    buildingDamageMultiplier: 0.25
+    ammoMultiplier: 1
+    fragBullets: 12
+    status: freezing
+    hitEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: RadialEffect
+              rotWithParent: false
+              effect: {
+                    type: ParticleEffect
+                    cone: 5
+                    particles: 25
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 120
+                    interp: pow10Out
+                    sizeInterp: pow5In
+                    colorFrom: b2c7d5aa
+                    colorTo: b2c7d5aa
+                      }
+            }
+              {
+                  type: WaveEffect
+                  sizeTo: 120
+                  strokeFrom: 5
+                  colorFrom: b2c7d5
+                  colorTo: b2c7d5
+                  lifetime: 100
+                    }
+            {
+                type: ParticleEffect
+                length: 80
+                colorFrom: b2c7d5aa
+                colorTo: b2c7d5aa
+                sizeFrom: 12
+                sizeTo: 0
+                interp: circleOut
+                particles: 5
+                startDelay: 5
+                lifetime: 160
+                sizeInterp: pow5In
+                  }
+                        {
+                type: ParticleEffect
+                length: 80
+                colorFrom: b2c7d5aa
+                colorTo: b2c7d5aa
+                sizeFrom: 8
+                sizeTo: 0
+                interp: circleOut
+                particles: 8
+                startDelay: 5
+                  lifetime: 150
+                sizeInterp: pow5In
+                  }
+                        {
+                type: ParticleEffect
+                length: 80
+                colorFrom: b2c7d5aa
+                colorTo: b2c7d5aa
+                sizeFrom: 6
+                sizeTo: 0
+                interp: circleOut
+                particles: 25
+                startDelay: 5
+                lifetime: 130
+                sizeInterp: pow5In
+                  }
+                        {
+                  type: WaveEffect
+                  sizeTo: 80
+                  strokeFrom: 10
+                  colorFrom: b2c7d5
+                  colorTo: b2c7d5
+                  lifetime: 15
+                  startDelay: 5
+                    }
+                    ]
+    }
+    fragVelocityMin: 0.95
+    fragBullet: {
+        type: BasicBullet
+        hitEffect: hitBulletColor
+        lifetime: 12
+        damage: 40
+        pierce: true
+        splashDamageRadius: 8
+        splashDamage: 2
+        frontColor: ffffff
+        speed: 6
+          }
+  }
+}
+]

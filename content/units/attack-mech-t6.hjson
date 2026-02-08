@@ -1,0 +1,162 @@
+flying: false
+type: mech
+drag: 0.3
+speed: 0.35
+rotateSpeed: 3
+accel: 0.4
+range: 400
+health: 55000
+buildSpeed: 0
+engineOffset: 6.5
+hitSize: 50
+itemCapacity: 210
+mechFrontSway: 0.7
+mechSideSway: 1.6
+mechStepParticles: true
+stepShake: 1.5
+outlineColor: 252529
+
+weapons: [
+{
+name: attack-mech-t6-weapon
+top: false
+mirror: true
+y: 0
+x: 32
+shootX: 0
+shootY: 30
+reload: 60
+ejectEffect: none
+recoil: 6
+shootSound: shootSmite
+inaccuracy: 0
+alternate: true
+shoot: {
+    shots: 10
+    shotDelay: 72
+    }
+
+bullet: {
+    type: LaserBulletType
+    damage: 110
+    length: 400
+    sideAngle: 40
+    lifetime: 50
+    shootEffect:{
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        line: true
+        length: 60
+        cone: 5
+        particles: 20
+        lenFrom: 8
+        lenTo: 0
+        colorFrom: ffb861
+        colorTo: ff8a66
+        lifetime: 20
+        strokeFrom: 1
+        strokeTo: 0.25
+        interp: swing
+        sizeInterp: swingIn
+        }
+        {
+        type: WaveEffect
+        sizeTo: 40
+        strokeFrom: 20
+        strokeTo: 0
+        colorFrom: ffb861
+        colorTo: ff8a66
+        }
+        ]
+        }
+    colors: [ff8a66aa, ff8a66dd, ff8a66ff]
+    lightningSpacing: 30
+    lightningDelay: 0.3
+    lightningLength: 2
+    lightningType: {
+        type: BasicBulletType
+        lifetime: 50
+        drag: 0.2
+        speed: 10
+        splashDamage: 120
+        splashDamageRadius: 30
+        hitEffect:  {
+        type: MultiEffect
+        effects: [
+        {
+        type: WaveEffect
+        strokeFrom: 16
+        sizeTo: 30
+        strokeTo: 0
+        colorFrom: ffb861
+        colorTo: ff8a66
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 300
+        sizeFrom: 6
+        sizeTo: 0
+        length: 20
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 300
+        sizeFrom: 8
+        particles: 2
+        sizeTo: 0
+        length: 20
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        }
+        ]
+        }
+        sprite: large-orb
+        width: 16
+        height: 16
+        shrinkX: 0
+        shrinkY: 0
+        backColor: ff8a66ff
+        frontColor: ffb861
+        shootEffect:  none
+        trailLength: 30
+        trailInterp: bounceOut
+        }
+    hitEffect: {
+        type: MultiEffect
+        effects: [
+{
+        type: WaveEffect
+        sides: 4
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        sizeTo: 24
+        strokeFrom: 13
+        strokeTo: 0
+        lifetime: 12
+        }
+        {
+        type: ParticleEffect
+        line: true
+        lenFrom: 4
+        lenTo: 0
+        strokeFrom: 5
+        strokeTo: 0
+        lifetime: 15
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        length: 40
+        particles: 8
+        }
+        ]
+        }
+}
+}
+]

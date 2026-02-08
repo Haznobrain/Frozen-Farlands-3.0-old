@@ -1,0 +1,76 @@
+type: flying
+flying: true
+speed: 2.9
+health: 500
+drag: 0.06
+accel: 0.09
+engineOffset: 6
+engineSize: 3
+hitSize: 14
+lowAltitude: true
+mineSpeed: 2
+mineTier: 2
+mineRange: 50
+    "faceTarget": true,
+    buildSpeed: 0.3
+    buildRange: 120
+itemCapacity: 15
+outlineColor: 252529
+mineItems: [
+  a1-yttrium
+  a2-arcanite
+]
+abilities: [
+  {
+    type: RepairFieldAbility
+    amount: 20
+    range: 50
+    reload: 90
+    }
+    ]
+weapons: [
+{
+reload: 50
+mirror: true
+x: 4
+y: 0
+baseRotation: 45
+alternate: false
+shootCone: 100
+rotate: false
+shootSound: shootAlt
+bullet: {
+  type: BasicBulletType
+  homingPower: 0.15
+  damage: 11
+  splashDamage: 4
+  splashDamageRadius: 8
+  pierce: true
+  pierceBuilding: true
+  pierceCap: 2
+  shootEffect: shootBigColor
+  smokeEffect: colorSparkBig
+  backColor: 73ffae
+  hitColor: 73ffae
+  trailColor: 73ffae
+  hitEffect: hitBulletColor
+  despawnEffect: none
+  hitSound: spark
+  lightning: 1
+  lightningLength: 2
+  lightningDamage: 2
+  healAmount: 15
+  collidesTeam: true
+  trailInterval: 4
+  trailEffect: disperseTrail
+  trailRotation: true
+  trailParam: 2
+  height: 12
+  width: 8
+  trailWidth: 4
+  trailLength: 8
+  speed: 5
+  lifetime: 30
+  }
+}
+]

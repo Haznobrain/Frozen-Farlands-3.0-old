@@ -1,0 +1,116 @@
+type: flying
+speed: 1.9
+health: 8400
+drag: 0.1
+accel: 0.15
+engineOffset: 19.5
+flying: true
+engineSize: 2
+engines: [
+  {
+  radius: 4
+  x: 12
+  y: -11
+  rotation: -45
+    }
+    {
+  radius: 4
+  x: -12
+  y: -11
+  rotation: 45
+    }
+    ]
+abilities: [
+  {
+    type: RepairFieldAbility
+    amount: 50
+    range: 70
+    reload: 120
+    }
+    ]
+hitSize: 30
+lowAltitude: true
+itemCapacity: 60
+faceTarget: true
+buildSpeed: 1
+buildRange: 170
+outlineColor: 252529
+rotateSpeed: 2.9
+weapons: [
+{
+name: supportflare-t4
+x: 0
+y: 0
+recoil: 0
+top: false
+mirror: false
+shootY: 4
+continuous: true
+alwaysContinuous: true
+minWarmup: 0.5
+shootWarmupSpeed: 0.1
+parts: [
+  {
+  type: RegionPart
+  mirror: true
+  suffix: -arm
+  heatColor: ff0000
+  moveRot: -15
+  moveX: -1
+  moveY: -2
+  progress: warmup
+  heatProgress: recoil
+    }
+  ]
+shootStatus: slow
+shootStatusDuration: 20
+shootSound: torch
+bullet: {
+  type: ContinuousFlameBulletType
+  damage: 10
+  pierceCap: 5
+  length: 160
+  width: 4
+  flareColor: 73ffae
+  colors: [50a3858c, 50a385b2, 73ffaecc, 73ffaeff, ffffffff]
+  hitColor: 73ffae
+  bulletInterval: 10
+  intervalRandomSpread: 30
+  intervalBullet: {
+      type: BasicBulletType
+      homingPower: 0.15
+      damage: 10
+      splashDamage: 5
+      splashDamageRadius: 10
+      pierce: true
+      shrinkY: 1
+      pierceBuilding: true
+      pierceCap: 2
+      shootEffect: shootBigColor
+      smokeEffect: colorSparkBig
+      backColor: 73ffae
+      hitColor: 73ffae
+      trailColor: 73ffae
+      lightningColor: 73ffae
+      hitEffect: hitBulletColor
+      despawnEffect: none
+      hitSound: spark
+      lightning: 1
+      lightningLength: 20
+      lightningDamage: 5
+      healAmount: 40
+      collidesTeam: true
+      trailInterval: 4
+      trailEffect: disperseTrail
+      trailRotation: true
+      trailParam: 2
+      height: 12
+      width: 8
+      trailWidth: 4
+      trailLength: 8
+      speed: 5.3
+      lifetime: 30
+  }
+}
+}
+]

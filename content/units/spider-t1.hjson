@@ -1,0 +1,66 @@
+name: Hook
+description: Launches piercing needles at enemies. Can step over most terrain.
+type: legs
+template: ErekirUnitType
+lightColor: ffd2ae
+outlineColor: 26262e
+itemCapacity: 0
+speed: 0.8
+drag: 0.11
+hitSize: 10
+rotateSpeed: 3.4
+health: 490
+armor: 3
+legStraightness: 0.12
+stepShake: 0
+legCount: 4
+legLength: 9
+lockLegBase: true
+legContinuousMove: true
+legExtension: -2
+legBaseOffset: 3
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.95
+legForwardScl: 1.11
+legGroupSize: 3
+rippleScale: 0.2
+legMoveSpace: 1
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.1
+groundLayer: 74
+weapons: [
+  {
+    name: spider-t1-weapon
+    shootSound: shootAlt
+    mirror: false
+    cooldownTime: 30
+    heatColor: ab3400
+    shootY: 0.2
+    x: 0
+    y: 0
+    reload: 12
+    ejectEffect: casing1
+    bullet: {
+      type: BasicBulletType
+      shootEffect: [
+        shootSmallColor,
+        hitBulletColor,
+        sparkShoot
+      ]
+      height: 10
+      width: 4
+      trailWidth: 1
+      trailLength: 3
+      lifetime: 20
+      speed: 12
+      damage: 18
+      pierce: true
+      pierceCap: 2
+      hitEffect: sparkShoot
+      despawnEffect: hitSquaresColor
+    }
+  }
+]

@@ -1,0 +1,108 @@
+outlineColor: 101010
+type: mech
+speed: 0.5
+hitSize: 20
+health: 14500
+faceTarget: true
+armor: 3
+range: 380
+rotateSpeed: 0.9
+mechFrontSway: 0.35
+mechSideSway: 0.35
+mechStepParticles: true
+stepShake: 0.4
+hovering: false
+immunities: [
+freezing
+]
+targetAir: true
+weapons: [
+{
+name: mech-t4-weapon
+x: 15
+y: 0
+mirror: true
+shootSound: mediumCannon
+reload: 90
+shootY: 10
+rotate: true
+rotationLimit: 25
+rotateSpeed: 2
+top: false
+layerOffset: -0.001
+recoil: 3
+shoot: {
+shots: 3
+shotDelay: 8
+}
+  bullet: {
+    type: basicBulletType
+    backColor: b4bccc
+    frontColor: ffffff
+    trailColor: b4bccc
+    damage: 120
+    splashDamage: 100
+    splashDamageRadius: 20
+    speed: 8
+    lifetime: 40
+    shrinkY: 0.5
+    width: 10
+    height: 20
+    trailWidth: 2
+    trailLength: 18
+    trailInterval: 2.5
+    hitEffect: [
+      {
+      type: ParticleEffect
+      particles: 8
+      length: 40
+      lifetime: 50
+      interp: pow5Out
+      sizeInterp: pow3In
+      cone: 360
+      offset: 0
+      lightColor: b4bccc
+      colorFrom: ffffff
+      colorTo: b4bccc00
+      sizeFrom: 6
+      sizeTo: 0
+      }
+    ]
+    shootEffect: [
+      {
+      type: ParticleEffect
+      particles: 5
+      length: 20
+      lifetime: 50
+      interp: pow5Out
+      sizeInterp: pow3In
+      cone: 60
+      offset: 0
+      lightColor: b4bccc
+      colorFrom: ffffff
+      colorTo: b4bccc00
+      sizeFrom: 6
+      sizeTo: 0
+      }
+    ]
+    smokeEffect: shootSmokeSquareSparse
+    trailEffect: [
+      {
+      type: ParticleEffect
+      particles: 3
+      length: 5
+      lifetime: 50
+      interp: pow5Out
+      sizeInterp: pow3In
+      cone: 360
+      offset: 0
+      lightColor: b4bccc
+      colorFrom: ffffff
+      colorTo: b4bccc00
+      sizeFrom: 5
+      sizeTo: 0
+      }
+    ]
+  }
+}
+]

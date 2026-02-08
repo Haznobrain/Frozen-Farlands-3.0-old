@@ -1,0 +1,269 @@
+type: flying
+flying: true
+speed: 1.1
+outlineColor: 0f0f14
+rotateSpeed: 2.05
+hitSize: 40
+engineOffset: 14
+engineSize: 8
+lowAltitude: false
+faceTarget: false
+circleTarget: true
+buildSpeed: 2
+buildRange: 250
+health: 21500
+armor: 30
+weapons: [
+{
+x: 0
+y: -22
+mirror: false
+reload: 120
+recoil: 0
+baseRotation: 180
+shootY: 0
+shootCone: 180
+parts: [
+{
+type: ShapePart
+sides: 4
+rotateSpeed: 4
+color: 73ffae
+y: 0
+x: 0
+mirror: false
+hollow: false
+radius: 0
+radiusTo: 8
+layer: 100
+  }
+{
+type: ShapePart
+sides: 4
+rotateSpeed: -4
+color: 73ffae
+y: 0
+x: 0
+mirror: false
+hollow: false
+radius: 0
+radiusTo: 8
+layer: 100
+  }
+  ]
+minWarmup: 0.95
+shootWarmupSpeed: 0.05
+top: false
+parentizeEffects: true
+shootSound: plasmaBoom
+bullet: {
+    type: BasicBulletType
+    damage: 390
+    rangeOverride: 360
+    keepVelocity: false
+    shootEffect: {
+      type: MultiEffect
+      effects: [shootTitan, shootSmokeTitan]
+        }
+    smokeEffect: shootSmokeDisperse
+    hitColor: 73ffae
+    speed: 4
+    drag: 0.2
+    trailLength: 12
+    trailWidth: 12
+    collidesAir: true
+    frontColor: 73ffae
+    backColor: 73ffae
+    trailColor: 73ffae
+    spin: 4
+    sprite: frozen-farlands-star
+    width: 16
+    height: 16
+    fragBullets: 1
+    lifetime: 100
+    healPercent: 5
+    collidesTeam: true
+    despawnEffect: {
+      type: ParticleEffect
+      particles: 10
+      line: true
+      lenFrom: 6
+      lenTo: 6
+      strokeFrom: 1
+      strokeTo: 0
+      lifetime: 30
+        }
+    hitEffect: {
+      type: MultiEffect
+      effects: [massiveExplosion, {
+        type: ParticleEffect
+        particles: 10
+        line: true
+        lenFrom: 6
+        lenTo: 6
+        strokeFrom: 1
+        strokeTo: 0
+        lifetime: 30
+        }
+            ]
+        }
+    shrinkX: 0
+    shrinkY: 0
+    fragVelocityMin: 1
+    fragRandomSpread: 0
+    fragBullet: {
+      type: BasicBulletType
+      damage: 200
+      collides: false
+      shrinkX: 0
+      homingRange: 360
+      speed: 0.5
+      fragVelocityMin: 1
+      fragRandomSpread: 0
+      shrinkY: 0
+      splashDamage: 90
+      splashDamageRadius: 28
+      healPercent: 5
+      collidesTeam: true
+      shootEffect: {
+        type: MultiEffect
+        effects: [shootTitan, shootSmokeTitan]
+          }
+      smokeEffect: shootSmokeDisperse
+      hitColor: 73ffae
+      trailLength: 12
+      trailWidth: 12
+      collidesAir: true
+      frontColor: 73ffae
+      backColor: 73ffae
+      trailColor: 73ffae
+      spin: 4
+      sprite: frozen-farlands-star
+      width: 16
+      height: 16
+      fragBullets: 1
+      lifetime: 50
+      despawnEffect: {
+            type: ParticleEffect
+            particles: 10
+             line: true
+             lenFrom: 6
+             lenTo: 6
+             strokeFrom: 1
+            strokeTo: 0
+            lifetime: 30
+            colorTo: 73ffae
+               }
+      homingPower: 360
+      fragBullets: 1
+      healPercent: 40
+      collidesTeam: true
+      hitEffect: {
+        type: MultiEffect
+        effects: [massiveExplosion, {
+          type: ParticleEffect
+          particles: 10
+          line: true
+          lenFrom: 6
+          lenTo: 6
+          strokeFrom: 1
+          strokeTo: 0
+          lifetime: 30
+          length: 40
+          }
+              ]
+          }
+      fragBullet: {
+        type: BasicBulletType
+        sprite: frozen-farlands-star
+        width: 16
+        height: 16
+        speed: 12
+        lifetime: 30
+        pierce: true
+        pierceBuilding: true
+        pierceCap: 10
+        damage: 250
+        splashDamage: 150
+        frontColor: 73ffae
+        backColor: 73ffae
+        splashDamageRadius: 40
+        hitEffect: {
+            type: MultiEffect
+            effects: [massiveExplosion, {
+              type: ParticleEffect
+              particles: 10
+              line: true
+              lenFrom: 6
+              lenTo: 6
+              strokeFrom: 1
+              strokeTo: 0
+              lifetime: 30
+              colorTo: 73ffae
+              length: 40
+              }
+                  ]
+              }
+        despawnEffect: shootSmokeTitan
+        shrinkX: 0
+        shrinkY: 0
+        trailInterval: 3
+        collidesTeam: true
+        healPercent: 40
+        trailEffect: {
+          type: ParticleEffect
+          region: frozen-farlands-star
+          colorTo: 73ffae
+          lifetime: 25
+          length: 40
+          particles: 5
+          sizeFrom: 6
+          spin: 3
+            }
+        fragBullets: 12
+        fragVelocityMin: 1
+        fragBullet: {
+          type: BasicBulletType
+          frontColor: ffffff
+          backColor: 73ffae
+          pierce: true
+          pierceBuilding: true
+          pierceCap: 2
+          homingPower: 0.15
+          hitEffect: hitBulletColor
+          despawnEffect: none
+          trailLength: 20
+          lifetime: 60
+          speed: 2
+          trailWidth: 3
+          height: 8
+          width: 6
+          shrinkX: 0
+          shrinkY: 0.5
+          damage: 12
+          healPercent: 5
+          collidesTeam: true
+          trailColor: 73ffae
+          hitColor: 73ffae
+            }
+      }
+    }
+}
+}
+]
+abilities: [
+  {
+    type: RepairFieldAbility
+    amount: 500
+    range: 150
+    reload: 120
+    }            
+{
+            "type": "ForceFieldAbility"
+            "radius": 150,
+            "regen": 6,
+            "max": 4000,
+            "cooldown": 380,
+            sides: 6
+            }
+    ]

@@ -1,0 +1,87 @@
+outlineColor: 36363c
+type: mech
+speed: 0.7
+hitSize: 14
+health: 380
+faceTarget: true
+armor: 1
+range: 380
+rotateSpeed: 2
+mechFrontSway: 0.35
+mechSideSway: 0.35
+mechStepParticles: true
+stepShake: 0.4
+hovering: false
+immunities: [
+freezing
+]
+targetAir: true
+weapons: [
+{
+name: mech-t2-weapon
+x: 6
+y: 0
+mirror: true
+shootSound: artillery
+reload: 30
+shootX: 0
+shootY: 2
+rotate: true
+rotationLimit: 15
+rotateSpeed: 2
+top: false
+recoil: 0.2
+layerOffset: -0.001
+  bullet: {
+    type: artilleryBulletType
+    sprite: shell
+    backColor: b4bccc
+    frontColor: ffffff
+    trailColor: b4bccc
+    damage: 30
+    splashDamage: 30
+    splashDamageRadius: 20
+    speed: 2
+    lifetime: 70
+    shrinkY: 0.5
+    width: 10
+    height: 15
+    trailWidth: 1.6
+    trailLength: 7
+    trailInterval: 1.5
+    shootEffect: shootSmallColor
+    smokeEffect: shootSmokeSquareSparse
+    trailEffect: [
+      {
+      type: ParticleEffect
+      particles: 3
+      length: 5
+      lifetime: 50
+      interp: pow5Out
+      sizeInterp: pow3In
+      cone: 0
+      offset: 0
+      lightColor: b4bccc
+      colorFrom: ffffff
+      colorTo: b4bccc00
+      sizeFrom: 1
+      sizeTo: 0
+      }
+      {
+      type: ParticleEffect
+      particles: 3
+      length: 10
+      lifetime: 80
+      interp: fastSlow
+      sizeInterp: pow3In
+      cone: 0
+      offset: 0
+      colorFrom: 404040
+      colorTo: 10101000
+      sizeFrom: 2.2
+      sizeTo: 0
+      }
+    ]
+  }
+}
+]

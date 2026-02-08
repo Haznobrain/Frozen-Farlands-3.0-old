@@ -1,0 +1,51 @@
+outlineColor: 36363c
+type: mech
+speed: 0.8
+hitSize: 14
+health: 380
+faceTarget: true
+armor: 1
+range: 140
+rotateSpeed: 2.5
+mechFrontSway: 0.3
+mechSideSway: 0.3
+mechStepParticles: true
+stepShake: 0.3
+hovering: false
+immunities: [
+freezing
+]
+targetAir: true
+weapons: [
+{
+name: mech-t1-weapon
+x: 5
+y: 0
+mirror: true
+reload: 30
+shootX: 0
+rotate: true
+rotationLimit: 15
+rotateSpeed: 2
+top: false
+recoil: 0.2
+layerOffset: -0.001
+  bullet: {
+    type: BasicBulletType
+    backColor: b4bccc
+    frontColor: ffffff
+    trailColor: b4bccc
+    damage: 30
+    speed: 6
+    lifetime: 20
+    width: 6
+    height: 7
+    trailWidth: 1.6
+    trailLength: 7
+    trailInterval: 4
+    shootEffect: shootSmallColor
+    smokeEffect: shootSmokeSquareSparse
+    trailEffect: hitSquaresColor
+  }
+}
+]

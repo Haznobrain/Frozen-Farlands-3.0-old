@@ -1,0 +1,29 @@
+flying: true
+drag: 0.05
+speed: 2.6
+rotateSpeed: 15
+accel: 0.1
+range: 130
+health: 400
+buildSpeed: 0.5
+engineOffset: 6.5
+hitSize: 9
+lowAltitude: true
+itemCapacity: 50
+outlineColor: 36363c
+
+mineTier: 2
+mineSpeed: 1.5
+mineItems: [
+  a1-yttrium
+  a2-arcanite
+]
+
+abilities: [
+  {
+    type: RepairFieldAbility
+    amount: 5
+    range: 50
+    reload: 60
+    }
+]

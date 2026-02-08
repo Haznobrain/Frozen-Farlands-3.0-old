@@ -1,0 +1,71 @@
+flying: false
+type: mech
+drag: 0.3
+speed: 0.9
+rotateSpeed: 5
+accel: 0.4
+range: 130
+health: 600
+buildSpeed: 0.5
+engineOffset: 6.5
+hitSize: 9
+itemCapacity: 10
+mechFrontSway: 0.3
+mechSideSway: 0.3
+mechStepParticles: true
+stepShake: 0.5
+outlineColor: 252529
+
+weapons: [
+{
+name: attack-mech-t1-weapon
+top: false
+mirror: true
+y: 0
+x: 0
+shootX: 4
+reload: 30
+ejectEffect: none
+recoil: 2
+shootSound: weak-shot1
+inaccuracy: 0
+alternate: true
+
+bullet: {
+    type: BasicBulletType
+    speed: 5
+    lifetime: 39
+    damage: 15
+    splashDamage: 5
+    splashDamageRadius: 5
+    width: 10
+    height: 14
+    frontColor: ffffff
+    sprite: frozen-farlands-pin-bullet
+    backColor: ffb861
+    shootEffect: shootSmallColor
+    hitColor: ffb861
+    smokeEffect: shootSmallSmoke
+    ammoMultiplier: 4
+    collidesTiles: true
+    hitEffect: pointHit
+    incendAmount: 1
+
+    trailChance: 0.3
+    trailLength: 3
+    trailWidth: 2
+    trailColor: ffb861
+    trailEffect: {
+    type: ParticleEffect
+    particles: 1
+    length: 10
+    lifetime: 15
+    sizeFrom: 4
+    sizeTo: 0
+    colorFrom: ffffff
+    colorTo: ffb861
+    region: particle
+  }
+}
+}
+]

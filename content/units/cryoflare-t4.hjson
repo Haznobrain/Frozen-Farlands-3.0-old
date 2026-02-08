@@ -1,0 +1,304 @@
+type: flying
+outlineColor: 0f0f14
+rotateSpeed: 1.95
+hitSize: 34
+engineOffset: 16
+engineSize: 8
+flying: true
+lowAltitude: true
+speed: 2
+health: 6100
+armor: 4
+accel: 0.08
+drag: 0.06
+name: Nimbus
+description: A larger but still light flying unit, fires small cryo missiles and fragmentary energy orbs.
+weapons: [
+  {
+  name: small-rocket-cryo
+  reload: 15
+  shootSound: missile
+  x: 16
+  y: -4
+  heatColor: ff0000
+  rotate: true
+  rotateSpeed: 5
+  bullet: {
+    type: MissileBulletType
+    weaveMag: 24
+    weaveScale: 2
+    frontColor: 4ef6ff
+    backColor: 3daae4
+    trailColor: 3daae4
+    hitColor: 3daae4
+    trailLength: 35
+    trailEffect: none
+    height: 10
+    lifetime: 60
+    speed: 4
+    hitEffect: {
+      type: MultiEffect
+      effects: [hitSquaresColor, {
+            type: WaveEffect
+            lifetime: 6
+            sizeTo: 12
+            strokeFrom: 6
+            strokeTo: 0
+            colorTo: 3daae4
+              }
+              ]
+        }
+    damage: 6
+    splashDamage: 15
+    splashDamageRadius: 12
+    despawnEffect: none
+    shootEffect: shootSmallColor
+    smokeEffect: colorSparkBig
+      }
+}
+{
+  name: cryoflare-t4-weapon
+  heatColor: ff0000
+  reload: 200
+  mirror: false
+  x: 0
+  y: 0
+  recoil: 0
+  shootSound: pulseBlast
+  shoot: {
+    firstShotDelay: 25
+      }
+  chargeSound: lasercharge2
+  shootY: 4
+  cooldownTime: 190
+  bullet: {
+    type: BasicBulletType
+    sprite: large-orb
+    damage: 135
+    hitSize: 25
+    width: 30
+    height: 30
+    shrinkX: 0
+    shrinkY: 0
+    chargeEffect: {
+      type: MultiEffect
+      effects: [
+{
+type: ParticleEffect
+particles: 1
+lifetime: 25
+sizeFrom: 0
+sizeTo: 30
+colorFrom: 3daae4
+colorTo: 4ef6ff
+length: 0
+}
+{
+type: ParticleEffect
+length: 20
+baseLength: -20
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+lifetime: 25
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+length: 20
+baseLength: -20
+lifetime: 20
+startDelay: 5
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+length: 20
+baseLength: -20
+lifetime: 15
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+startDelay: 10
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+length: 20
+baseLength: -20
+lifetime: 10
+startDelay: 15  
+interp: swingIn
+sizeFrom: 0
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+sizeTo: 6
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+length: 20
+baseLength: -20
+lifetime: 5
+startDelay: 20
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+{
+type: WaveEffect
+interp: bounceIn
+sizeFrom: 30
+sizeTo: 0
+strokeFrom: 0
+strokeTo: 2
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+]
+}
+    shootEffect: {
+      type: MultiEffect
+      effects: [
+{
+type: RadialEffect
+amount: 3
+rotationSpacing: 40
+rotWithParent: true
+followParent: true
+effect: {
+  type: ParticleEffect
+  region: frozen-farlands-spike
+  sizeFrom: 12
+  sizeTo: 0
+  lifetime: 15
+  colorFrom: 3daae4
+  colorTo: 4ef6ff
+  length: -10
+  baseLength: 0
+    }
+}
+{
+type: ParticleEffect
+particles: 12
+sizeFrom: 6
+region: particle
+cone: 20
+lifetime: 50
+length: 28
+interp: swingOut
+colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+]
+}
+  smokeEffect: shootSmokeSquareBig
+  hitEffect: {
+    type: MultiEffect
+    effects: [
+{
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+  type: WaveEffect
+  sizeTo: 32
+  strokeFrom: 6
+  lifetime: 30
+}
+{
+type: ParticleEffect
+particles: 12
+sizeFrom: 6
+region: particle
+lifetime: 50
+length: 28
+interp: swingOut
+colorFrom: 3daae4
+colorTo: 4ef6ff
+}   
+]
+}
+    despawnEffect: none
+    splashDamage: 145
+    splashDamageRadius: 30
+    trailParam: 6  
+    trailLength: 30
+    speed: 2.6
+    lifetime: 150
+    trailEffect: {
+      type: ParticleEffect
+      interp: one
+      sizeInterp: bounceOut
+      particles: 4
+      colorFrom: 3daae4
+      colorTo: 4ef6ff00
+      lifetime: 120
+      length: 20
+    }
+    trailInterval: 4
+    frontColor: 4ef6ff
+    backColor: 3daae4
+    trailColor: 3daae4
+    hitColor: 3daae4
+    fragBullets: 1
+    fragBullet: {
+        type: BombBulletType
+        sprite: large-orb
+        shrinkX: 1
+        speed: 0
+        shrinkY: 1
+        frontColor: 4ef6ff
+        backColor: 3daae4
+        parts: [
+        {
+        type: FlarePart
+         radius: 0
+        radiusTo: 20
+        color1: 3daae4
+        progress: life
+          }
+            ]
+        collidesAir: false
+        splashDamage: 45
+        splashDamageRadius: 20
+        hitEffect: {
+          type: WrapEffect
+          rotation: 20
+          effect: dynamicSpikes
+          color: 3daae4
+            }
+        bulletInterval: 3
+        intervalBullets: 2
+        intervalBullet: {
+          type: BasicBulletType
+          speed: 5
+          damage: 6
+          trailLength: 10
+          lifetime: 20
+          trailEffect: disperseTrail
+          trailRotation: true
+          hitEffect: hitBulletColor
+          despawnEffect: hitBulletColor
+          trailInterval: 2
+          frontColor: 4ef6ff
+          backColor: 3daae4
+          hitColor: 3daae4
+          trailColor:3daae4
+          status: freezing
+          knockback: -3
+            }
+    }
+  }
+}
+]

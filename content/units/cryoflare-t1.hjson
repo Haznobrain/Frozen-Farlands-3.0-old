@@ -1,0 +1,39 @@
+flying: true
+drag: 0.05
+speed: 3.0
+rotateSpeed: 15
+accel: 0.1
+range: 130
+health: 400
+engineOffset: 6.5
+hitSize: 9
+lowAltitude: true
+itemCapacity: 10
+outlineColor: 21252a
+
+weapons: [
+{
+name: a
+x: 0
+y: 0
+top: false
+rotate: false
+reload: 240
+recoil: 1
+layerOffset: -1
+shootSound: missileSmall
+ejectEffect: none
+    bullet: { 
+      type: BasicBulletType
+      width: 10
+      height: 10
+      shrinkY: 0
+      shrinkX: 0
+      lifetime: 20
+      speed: 1
+      layer: 95
+      sprite: frozen-farlands-small-rocket-cryo
+      despawnUnit: small-rocket-cryo
+    }
+}
+]

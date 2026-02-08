@@ -1,0 +1,92 @@
+type: flying
+flying: true
+speed: 3.4
+health: 150
+drag: 0.06
+accel: 0.09
+engineOffset: 5
+engineSize: 2
+hitSize: 10
+lowAltitude: true
+mineSpeed: 1.5
+mineTier: 2
+mineRange: 40
+itemCapacity: 15
+outlineColor: 252529
+mineItems: [
+  a1-yttrium
+  a2-arcanite
+]
+weapons: [
+{
+reload: 20
+x: 0
+y: 4.5
+recoil: 0
+mirror: false
+shootSound: weak-shot1
+rotate: true
+bullet: {
+  type: BasicBulletType
+  frontColor: ffffff
+  backColor: 73ffae
+  damage: 8
+  splashDamage: 3
+  splashDamageRadius: 4
+  healAmount: 10
+  collidesTeam: true
+  trailInterval: 6
+  sprite: missile-large
+  speed: 6
+  trailEffect: {
+    type:WaveEffect
+    sizeFrom: 5
+    sizeTo: 0
+    strokeFrom: 0.5
+    strokeTo: 0
+    lifetime: 30
+      colorFrom: 73ffae
+      colorTo: 73ffae
+      }
+  hitEffect: {
+      type: MultiEffect
+      effects: [
+{
+      type: ParticleEffect
+      region: frozen-farlands-star
+      lifetime: 10
+      particles: 1
+      sizeFrom: 10
+      sizeTo: 0
+      length: 0
+        }
+        {
+      type: ParticleEffect
+      lifetime: 30
+      particles: 1
+      length: 0
+      sizeFrom: 4
+      sizeTo: 4
+      colorFrom: 73ffae
+      colorTo: 73ffae00
+        }
+    ]
+  }
+  despawnEffect: none
+  despawnHit: true
+  shootEffect: shootSmallColor
+  smokeEffect: {
+      type: ParticleEffect
+      length: 10
+      sizeFrom: 5
+      particles: 3
+      lifetime: 20
+      colorFrom: 73ffae
+      colorTo: 73ffae
+        }
+  trailLength: 4
+  lifetime: 20
+  trailColor: 73ffae
+    }
+}
+  ]

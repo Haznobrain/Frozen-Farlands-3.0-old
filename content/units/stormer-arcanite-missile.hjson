@@ -1,0 +1,136 @@
+type: missile
+speed: 5
+lifetime: 180
+missileAccelTime: 20
+health: 120
+rotateSpeed: 0.26
+maxRange: 6
+engineColor: ffe785
+trailColor: ffe785
+engineLayer: 100
+engineSize: 3.1
+engineOffset: 8
+trailLength: 16
+lowAltitude: true
+flying: true
+physics: false
+loopSound: missileTrail
+loopSoundVolume: 0.6
+deathSound: largeExplosion
+targetAir: true
+targetUnderBlocks: false
+fogRadius: 3
+hoverable: false
+controllable: false
+playerControllable: false
+fallSpeed: 60
+controller: MissileAI
+weapons: [
+  {
+  shootCone: 360
+  mirror: false
+  reload: 1
+  deathExplosionEffect: massiveExplosion
+  shootOnDeath: true
+  shake: 8
+  bullet: {
+    type: ExplosionBulletType
+    splashDamageRadius: 60
+    splashDamage: 800
+    hitColor: ffe785
+    collidesAir: true
+    buildingDamageMultiplier: 0.25
+    ammoMultiplier: 1
+    fragBullets: 12
+    hitEffect: {
+          type: MultiEffect
+          effects: [
+            {
+              type: RadialEffect
+              rotWithParent: false
+              effect: {
+                    type: ParticleEffect
+                    cone: 5
+                    particles: 25
+                    sizeFrom: 8
+                    sizeTo: 0
+                    lifetime: 120
+                    interp: pow10Out
+                    sizeInterp: pow5In
+                    colorFrom: ffe785aa
+                    colorTo: ffe785aa
+                      }
+            }
+              {
+                  type: WaveEffect
+                  sizeTo: 120
+                  strokeFrom: 5
+                  colorFrom: ffe785
+                  colorTo: ffe785
+                  lifetime: 100
+                    }
+            {
+                type: ParticleEffect
+                length: 60
+                colorFrom: ffe785aa
+                colorTo: ffe785aa
+                sizeFrom: 12
+                sizeTo: 0
+                interp: circleOut
+                particles: 5
+                startDelay: 5
+                lifetime: 160
+                sizeInterp: pow5In
+                  }
+                        {
+                type: ParticleEffect
+                length: 60
+                colorFrom: ffe785aa
+                colorTo: ffe785aa
+                sizeFrom: 8
+                sizeTo: 0
+                interp: circleOut
+                particles: 8
+                startDelay: 5
+                lifetime: 150
+                sizeInterp: pow5In
+                  }
+                        {
+                type: ParticleEffect
+                length: 60
+                colorFrom: ffe785aa
+                colorTo: ffe785aa
+                sizeFrom: 6
+                sizeTo: 0
+                interp: circleOut
+                particles: 25
+                startDelay: 5
+                lifetime: 140
+                sizeInterp: pow5In
+                  }
+                        {
+                  type: WaveEffect
+                  sizeTo: 80
+                  strokeFrom: 10
+                  colorFrom: ffe785
+                  colorTo: ffe785
+                  lifetime: 15
+                  startDelay: 5
+                    }
+                    ]
+    }
+    fragBullet: {
+        type: LightningBulletType
+        hitEffect: massiveExplosion
+        lifetime: 12
+        damage: 50
+        lightningLength: 8
+        lightningLengthRand: 5
+        lightningColor: ffe785
+        despawnHit: true
+        splashDamageRadius: 8
+        splashDamage: 2
+          }
+  }
+}
+]

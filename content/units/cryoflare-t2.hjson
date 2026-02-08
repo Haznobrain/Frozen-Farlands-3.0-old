@@ -1,0 +1,95 @@
+name: cirrius
+description: A nimble flying attack drone, armed with a missile launcher.
+type: flying
+rotateSpeed: 8
+fogRadius: 0
+template: ErekirUnitType
+range: 270
+faceTarget: true
+targetPriority: -2
+lowAltitude: true
+flying: true
+speed: 4
+drag: 0.08
+accel: 0.05
+itemCapacity: 45
+health: 330
+armor: 1
+hitSize: 9
+engineSize: 0
+outlineColor: 0f0f14
+isEnemy: false
+engines: [
+  {
+    x: 0
+    y: -7
+    rotation: 270
+    radius: 4
+  }
+  {
+    x: 4
+    y: -6
+    rotation: 135
+    radius: 3
+  }
+  {
+    x: -4
+    y: -6
+    rotation: 45
+    radius: 3
+  }
+]
+weapons: [
+  {
+    name: cryoflare-t2-gunner
+    mirror: true
+    x: 4.5
+    y: 0.5
+    shootY: 5
+    shoot: {
+    shots: 3 
+    shotDelay: 15
+    }
+    layerOffset: -0.001
+    reload: 45
+    recoil: 2
+    inaccuracy: 3
+    shootSound: blaster
+    alternate: false
+    bullet: {
+          type: BasicBulletType
+          speed: 5
+          damage: 6
+          trailLength: 10
+          lifetime: 50
+          width: 10
+          height: 14
+          trailEffect: disperseTrail
+          trailRotation: true
+          hitEffect: hitBulletColor
+          despawnEffect: hitBulletColor
+          trailInterval: 2
+          frontColor: 4ef6ff
+          backColor: 3daae4
+          hitColor: 3daae4
+          trailColor:3daae4
+          status: freezing
+          knockback: -3
+      hitEffect: [
+        {
+          type: ParticleEffect
+          particles: 6
+          line: true
+          lifetime: 15
+          length: 15
+          lenFrom: 5
+          lenTo: 0
+          strokeFrom: 4
+          strokeTo: 0
+          colorFrom: 03f8fc
+          colorTo: ffffff
+        }
+      ]
+    }
+  }
+]

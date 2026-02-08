@@ -1,0 +1,689 @@
+type: flying
+flying: true
+engineSize: 8
+engineOffset: 20
+speed: 1.2
+rotateSpeed: 1.7
+drag: 0.07
+accel: 0.08
+name: Cumulus
+description: Fires fragmentary artillery shells and a large flak orb every few seconds. Fast and light for its tier.
+health: 16000
+armor: 13
+lowAltitude: true
+outlineColor: 0f0f14
+hitSize: 45
+weapons: [
+{
+name: cryogun
+reload: 60
+shootY: 5
+rotate: true
+x: 12
+y: -6
+shootSound: laser
+heatColor: ffb937
+rotateSpeed: 2.2
+bullet: {
+  type: ArtilleryBulletType
+  lifetime: 80
+  speed: 3
+  damage: 5
+  splashDamage: 75
+  splashDamageRadius: 30
+  hitEffect: hitSquaresColor
+  shootEffect: shootBigColor
+  smokeEffect: shootSmokeDisperse
+  hitColor: 4ef6ff
+  frontColor: 4ef6ff
+  backColor: 3daae4
+  trailColor: 3daae4
+  trailLength: 20
+  trailWidth: 10
+  trailParam: 2
+  height: 30
+  width: 20
+  shrinkInterp: slope
+  trailInterp: slope
+  fragBullets: 2
+  fragSpread: 180
+  fragRandomSpread: 0
+  fragBullet: {
+    type: LaserBulletType
+    damage: 60
+    status: freezing
+    statusDuration: 1200
+    colors: [3daae4aa, 4ef6ff, ffffff]
+    sideLength: 10
+    length: 40
+    sideWidth: 4
+    width: 10
+    lifetime: 50
+    hitEffect: hitLaserColor
+    hitColor: 4ef6ff
+      }
+  spawnBullets: [
+      {
+  type: ArtilleryBulletType
+  lifetime: 80
+  speed: 2.5
+  damage: 5
+  splashDamage: 75
+  splashDamageRadius: 30
+  hitEffect: hitSquaresColor
+  shootEffect: shootBigColor
+  smokeEffect: shootSmokeDisperse
+  hitColor: 4ef6ff
+  frontColor: 4ef6ff
+  backColor: 3daae4
+  trailColor: 3daae4
+  trailLength: 20
+  trailWidth: 10
+  trailParam: 2
+  height: 30
+  width: 20
+  shrinkInterp: slope
+  trailInterp: slope
+  fragBullets: 2
+  fragSpread: 180
+  fragRandomSpread: 0
+  fragBullet: {
+    type: LaserBulletType
+    damage: 60
+    status: freezing
+    statusDuration: 1200
+    colors: [3daae4aa, 4ef6ff, ffffff]
+    sideLength: 10
+    length: 40
+    sideWidth: 4
+    width: 10
+    lifetime: 50
+    hitEffect: hitLaserColor
+    hitColor: 4ef6ff
+      }
+}
+    {
+  type: ArtilleryBulletType
+  lifetime: 80
+  speed: 2
+  damage: 5
+  splashDamage: 75
+  splashDamageRadius: 30
+  hitEffect: hitSquaresColor
+  shootEffect: shootBigColor
+  smokeEffect: shootSmokeDisperse
+  hitColor: 4ef6ff
+  frontColor: 4ef6ff
+  backColor: 3daae4
+  trailColor: 3daae4
+  trailLength: 20
+  trailWidth: 10
+  trailParam: 2
+  height: 30
+  width: 20
+  shrinkInterp: slope
+  trailInterp: slope
+  fragBullets: 2
+  fragSpread: 180
+  fragRandomSpread: 0
+  fragBullet: {
+    type: LaserBulletType
+    damage: 60
+    status: freezing
+    statusDuration: 1200
+    colors: [3daae4aa, 4ef6ff, ffffff]
+    sideLength: 10
+    length: 40
+    sideWidth: 4
+    width: 10
+    lifetime: 50
+    hitEffect: hitLaserColor
+    hitColor: 4ef6ff
+      }
+}
+  {
+  type: ArtilleryBulletType
+  lifetime: 80
+  speed: 1.5
+  damage: 5
+  splashDamage: 75
+  splashDamageRadius: 30
+  hitEffect: hitSquaresColor
+  shootEffect: shootBigColor
+  smokeEffect: shootSmokeDisperse
+  hitColor: 4ef6ff
+  frontColor: 4ef6ff
+  backColor: 3daae4
+  trailColor: 3daae4
+  trailLength: 20
+  trailWidth: 10
+  trailParam: 2
+  height: 30
+  width: 20
+  shrinkInterp: slope
+  trailInterp: slope
+  fragBullets: 2
+  fragSpread: 180
+  fragRandomSpread: 0
+  fragBullet: {
+    type: LaserBulletType
+    damage: 60
+    status: freezing
+    statusDuration: 1200
+    colors: [3daae4aa, 4ef6ff, ffffff]
+    sideLength: 10
+    length: 40
+    sideWidth: 4
+    width: 10
+    lifetime: 50
+    hitEffect: hitLaserColor
+    hitColor: 4ef6ff
+      }
+}
+  {
+  type: ArtilleryBulletType
+  lifetime: 80
+  speed: 1
+  damage: 5
+  splashDamage: 75
+  splashDamageRadius: 30
+  hitEffect: hitSquaresColor
+  shootEffect: shootBigColor
+  smokeEffect: shootSmokeDisperse
+  hitColor: 4ef6ff
+  frontColor: 4ef6ff
+  backColor: 3daae4
+  trailColor: 3daae4
+  trailLength: 20
+  trailWidth: 10
+  trailParam: 2
+  height: 30
+  width: 20
+  shrinkInterp: slope
+  trailInterp: slope
+  fragBullets: 2
+  fragSpread: 180
+  fragRandomSpread: 0
+  fragBullet: {
+    type: LaserBulletType
+    damage: 60
+    status: freezing
+    statusDuration: 1200
+    colors: [3daae4aa, 4ef6ff, ffffff]
+    sideLength: 10
+    length: 40
+    sideWidth: 4
+    width: 10
+    lifetime: 50
+    hitEffect: hitLaserColor
+    hitColor: 4ef6ff
+      }
+}
+  {
+  type: ArtilleryBulletType
+  lifetime: 80
+  speed: 0.5
+  damage: 5
+  splashDamage: 75
+  splashDamageRadius: 30
+  hitEffect: hitSquaresColor
+  shootEffect: shootBigColor
+  smokeEffect: shootSmokeDisperse
+  hitColor: 4ef6ff
+  frontColor: 4ef6ff
+  backColor: 3daae4
+  trailColor: 3daae4
+  trailLength: 20
+  trailWidth: 10
+  trailParam: 2
+  height: 30
+  width: 20
+  shrinkInterp: slope
+  trailInterp: slope
+  fragBullets: 2
+  fragSpread: 180
+  fragRandomSpread: 0
+  fragBullet: {
+    type: LaserBulletType
+    damage: 60
+    status: freezing
+    statusDuration: 1200
+    colors: [3daae4aa, 4ef6ff, ffffff]
+    sideLength: 10
+    length: 40
+    sideWidth: 4
+    width: 10
+    lifetime: 50
+    hitEffect: hitLaserColor
+    hitColor: 4ef6ff
+      }
+}
+  ]
+}
+}
+  {
+  name: cryoflare-t5-weapon
+  shootSound: laserblast
+  chargeSound: lasercharge
+  recoil: 0
+  reload: 300
+  top: false
+  mirror: false
+  x: 0
+  y: 0
+  cooldownTime: 320
+  shootStatusDuration: 100
+  shootStatus: slow
+  shootY: 8
+  heatColor: ff0000
+  shoot: {
+    firstShotDelay: 80
+      }
+  bullet: {
+    type: BasicBulletType
+    sprite: large-orb
+    damage: 175
+    hitSize: 35
+    width: 40
+    height: 40
+    shrinkX: 0
+    shrinkY: 0
+          chargeEffect: {
+      type: MultiEffect
+      effects: [
+{
+type: ParticleEffect
+particles: 1
+lifetime: 80
+sizeFrom: 0
+sizeTo: 40
+colorFrom: 3daae4
+colorTo: 4ef6ff
+length: 0
+}
+{
+type: ParticleEffect
+length: 40
+baseLength: -40
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+lifetime: 80
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 75
+startDelay: 5
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 70
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+startDelay: 10
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 65
+startDelay: 15  
+interp: swingIn
+sizeFrom: 0
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+sizeTo: 6
+sizeInterp: linear
+}
+{
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 60
+startDelay: 20
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+      {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 55
+startDelay: 25
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 50
+startDelay: 30
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 45
+startDelay: 35
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 40
+startDelay: 40
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 35
+startDelay: 45
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 30
+startDelay: 50
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 25
+startDelay: 55
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 20
+startDelay: 60
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 15
+startDelay: 65
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 10
+startDelay: 70
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+            {
+type: ParticleEffect
+length: 40
+baseLength: -40
+lifetime: 5
+startDelay: 75
+interp: swingIn
+sizeFrom: 0
+sizeTo: 6
+sizeInterp: linear
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+{
+type: WaveEffect
+interp: bounceIn
+sizeFrom: 40
+lifetime: 80
+sizeTo: 0
+strokeFrom: 0
+strokeTo: 2
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+]
+}
+    hitSound: plasmaboom
+        shootEffect: {
+      type: MultiEffect
+      effects: [
+{
+type: RadialEffect
+amount: 3
+rotationSpacing: 40
+rotWithParent: true
+followParent: true
+effect: {
+  type: ParticleEffect
+  region: frozen-farlands-spike
+  sizeFrom: 20
+  sizeTo: 0
+  lifetime: 15
+  colorFrom: 3daae4
+  colorTo: 4ef6ff
+  length: -20
+  baseLength: 0
+  randLength: false
+    }
+}
+{
+type: ParticleEffect
+particles: 16
+sizeFrom: 8
+region: particle
+cone: 20
+lifetime: 50
+length: 30
+interp: swingOut
+colorFrom: 3daae4
+colorTo: 4ef6ff
+}
+]
+}
+  smokeEffect: shootSmokeSquareBig
+    hitEffect: {
+    type: MultiEffect
+    effects: [
+{
+  colorFrom: 3daae4
+colorTo: 4ef6ff
+  type: WaveEffect
+  sizeTo: 40
+  strokeFrom: 6
+  lifetime: 30
+}
+{
+type: ParticleEffect
+particles: 12
+sizeFrom: 6
+region: particle
+lifetime: 50
+length: 40
+interp: swingOut
+colorFrom: 3daae4
+colorTo: 4ef6ff
+}   
+{
+  type: WrapEffect
+  rotation: 40
+  color: 3daae4
+  effect: dynamicSpikes
+    }
+]
+}
+    splashDamage: 230
+    splashDamageRadius: 40
+    despawnEffect: none
+    trailParam: 6
+    trailLength: 40
+    trailWidth: 20
+    speed: 3
+    lifetime: 200
+    trailEffect: {
+      type: ParticleEffect
+      interp: one
+      sizeInterp: bounceOut
+      particles: 4
+      colorFrom: 3daae4
+      colorTo: 4ef6ff00
+      lifetime: 120
+      length: 30
+    }
+    trailInterval: 4
+    frontColor: 4ef6ff
+    backColor: 3daae4
+    trailColor: 3daae4
+    hitColor: 3daae4
+    intervalBullets: 2
+    bulletInterval: 5
+    intervalBullet: {
+        type: BasicBulletType
+        damage: 7
+        splashDamage: 1
+        splashDamageRadius: 6
+        pierce: true
+        pierceBuilding: true
+        pierceCap: 6
+        hitEffect: hitBulletColor
+        frontColor: 4ef6ff
+        trailRotation: true
+        backColor: 3daae4
+        trailColor: 3daae4
+        hitColor: 3daae4
+        trailInterval: 4
+        trailEffect: disperseTrail
+        despawnEffect: hitSquaresColor
+        trailLength: 10
+        speed: 8
+        lifetime: 15
+          }
+    fragBullets: 1
+    fragBullet: {
+              type: BombBulletType
+        sprite: large-orb
+        shrinkX: 1
+        speed: 0
+        shrinkY: 1
+        frontColor: 4ef6ff
+        backColor: 3daae4
+        lifetime: 200
+        parts: [
+        {
+        type: FlarePart
+         radius: 0
+        radiusTo: 40
+        color1: 3daae4
+        progress: life
+          }
+            ]
+        collidesAir: false
+        splashDamage: 200
+        splashDamageRadius: 40
+        hitEffect: {
+          type: WrapEffect
+          rotation: 40
+          effect: dynamicSpikes
+          color: 3daae4
+            }
+        bulletInterval: 3
+        intervalBullets: 2
+        intervalBullet: {
+          type: BasicBulletType
+          speed: 5
+          damage: 10
+          trailLength: 10
+          lifetime: 20
+          trailEffect: disperseTrail
+          trailRotation: true
+          hitEffect: hitBulletColor
+          despawnEffect: hitBulletColor
+          trailInterval: 2
+          frontColor: 4ef6ff
+          backColor: 3daae4
+          hitColor: 3daae4
+          trailColor:3daae4
+          status: freezing
+          knockback: -3
+            }
+    }
+  }
+}
+]

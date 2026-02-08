@@ -1,0 +1,166 @@
+flying: false
+type: mech
+drag: 0.3
+speed: 0.8
+rotateSpeed: 5
+accel: 0.4
+range: 200
+health: 2650
+armor: 8
+engineOffset: 6.5
+hitSize: 20
+itemCapacity: 30
+mechFrontSway: 0.3
+mechSideSway: 0.5
+mechStepParticles: true
+stepShake: 0.5
+outlineColor: 252529
+
+weapons: [
+{
+name: attack-mech-t3-weapon
+top: false
+mirror: true
+y: 0
+x: 12
+shootX: 0
+reload: 90
+ejectEffect: casing2
+recoil: 4
+shootSound: mediumCannon
+inaccuracy: 0
+alternate: true
+
+bullet: {
+    type: BulletType
+    damage: 30
+    pierce: true
+    pierceBuilding: true
+    pierceCap: 2
+    speed: 5
+    lifetime: 30
+    shootEffect: {
+        type: MultiEffect
+        effects: [
+{
+type: ParticleEffect
+cone: 5
+length: 150
+colorFrom: 666f7d
+colorTo: 363b42
+lifetime: 90
+interp: pow10Out
+sizeInterp: pow5In
+sizeFrom: 6
+sizeTo: 0
+particles: 30
+}
+{
+type: ParticleEffect
+cone: 5
+length: 150
+colorFrom: 666f7d
+colorTo: 363b42
+lifetime: 95
+interp: pow10Out
+sizeInterp: pow5In
+sizeFrom: 8
+sizeTo: 0
+particles: 15
+}
+{
+type: ParticleEffect
+cone: 5
+length: 150
+colorFrom: ffb861
+colorTo: ff8a66
+lifetime: 95
+interp: pow10Out
+sizeInterp: pow5In
+particles: 30
+line: true
+lenFrom: 6
+lenTo: 0
+strokeFrom: 1
+strokeTo: 1
+}
+{
+type: ParticleEffect
+cone: 5
+length: 150
+colorFrom: ffb861
+colorTo: ff8a66
+lifetime: 95
+interp: pow10Out
+sizeInterp: pow5In
+particles: 10
+line: true
+lenFrom: 12
+lenTo: 0
+strokeFrom: 1.5
+strokeTo: 1
+}
+{
+type: WaveEffect
+sizeTo: 20
+lifetime: 20
+strokeFrom: 10
+colorTo: ffb861
+}
+]
+}
+    hitEffect: massiveExplosion
+    collidesAir: false
+    bulletInterval: 5
+    intervalBullet: {
+        type: BulletType
+        collidesAir: false
+        damage: 0
+        splashDamage: 80
+        splashDamageRadius: 30
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: WaveEffect
+        strokeFrom: 15
+        sizeTo: 30
+        strokeTo: 0
+        colorFrom: ffb861
+        colorTo: ff8a66
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 150
+        sizeFrom: 6
+        sizeTo: 0
+        length: 30
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 150
+        sizeFrom: 8
+        particles: 2
+        sizeTo: 0
+        length: 30
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        }
+        ]
+        }
+        despawnEffect: none
+        lifetime: 0
+        speed: 0
+        keepVelocity: false
+        }
+    keepVelocity: false
+    recoil: 4
+    }
+}
+]

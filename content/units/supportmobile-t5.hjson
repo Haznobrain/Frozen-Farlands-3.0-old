@@ -1,0 +1,92 @@
+type: tank
+speed: 1.2
+controller: HugAI
+hitSize: 40
+omniMovement: false
+rotateSpeed: 1.6
+health: 19500
+armor: 20
+faceTarget: false
+outlineColor: 3a3743
+crushDamage: 5
+treadPullOffset: 40
+range: 90
+abilities: [
+{
+type: EnergyFieldAbility
+damage: 7
+reload: 5
+range: 100
+status: electrified
+y: -12.25
+maxTargets: 6
+healPercent: 1
+sameTypeHealMult: 0.25
+effectRadius: 3.0
+sectors: 5
+sectorRad: 0.14
+color: 84f491
+}
+{
+type: EnergyFieldAbility
+damage: 25
+reload: 50
+range: 140
+status: electrified
+y: 14
+maxTargets: 25
+healPercent: 1
+sameTypeHealMult: 0.25
+effectRadius: 2
+sectors: 5
+sectorRad: 0.14
+color: 84f491
+}
+{
+type: EnergyFieldAbility
+damage: 250
+reload: 300
+range: 100
+status: electrified
+y: 0.25
+maxTargets: 1
+healPercent: 10
+sameTypeHealMult: 0.25
+effectRadius: 5
+sectors: 5
+sectorRad: 0.14
+color: 84f491
+}
+{
+type: ShieldArcAbility
+radius: 60
+y: 10.25
+whenShooting: false
+width: 12
+angle: 80
+max: 1250
+cooldown: 360
+regen: 0.5
+}
+  ]
+weapons: [
+{
+x: 0
+y: 0.25
+mirror: false
+reload: 8
+type: PointDefenseWeapon
+rotate: true
+color: 84f491
+controllable: false
+autoTarget: true
+shootSound: bolt
+bullet: {
+  maxRange: 160
+  damage: 15
+  hitEffect: pointHit
+  smokeEffect: pointHit
+  shootEffect: colorSpark
+    }
+}
+  ]

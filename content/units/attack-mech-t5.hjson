@@ -1,0 +1,183 @@
+flying: false
+type: mech
+drag: 0.3
+speed: 0.4
+rotateSpeed: 5
+accel: 0.4
+range: 320
+health: 21500
+armor: 20
+buildSpeed: 0
+hitSize: 40
+itemCapacity: 150
+mechFrontSway: 0.3
+mechSideSway: 1
+mechStepParticles: true
+stepShake: 0.7
+outlineColor: 252529
+
+weapons: [
+{
+name: attack-mech-t5-weapon
+top: false
+mirror: true
+y: 0
+x: 24
+shootX: 0
+shootY: 20
+reload: 40
+ejectEffect: casing3
+recoil: 5
+shootSound: artillery
+inaccuracy: 1
+alternate: true
+shoot: {
+    type: ShootAlternate
+    spread: 2
+    shots: 3
+    shotDelay: 50
+    }
+
+bullet: {
+        spawnBullets: [
+    {
+    type: BulletType
+    damage: 0
+    instantDisappear: true
+    shootEffect: none
+    smokeEffect: none
+    despawnEffect: none
+    hitEffect: none
+    lifetime: 0
+    fragVelocityMin: 0.1
+    fragBullets: 1
+    fragRandomSpread: 10
+    fragBullet: {
+    type: BasicBulletType
+    frontColor: ffb861
+    backColor: ff8a66
+    damage: 35
+    splashDamage: 40
+    splashDamageRadius: 20
+    createChance: 0.6
+    speed: 10
+    lifetime: 30
+    hitEffect: hitBulletColor
+    hitColor: ff8a66
+    trailColor: ff8a66
+    trailLength: 20
+    }
+    }
+    {
+    type: BulletType
+    damage: 0
+    instantDisappear: true
+    shootEffect: none
+    smokeEffect: none
+    despawnEffect: none
+    hitEffect: none
+    lifetime: 0
+    fragBullets: 1
+    fragRandomSpread: 10
+    fragBullet: {
+        type: LaserBulletType
+        damage: 40
+        colors: [ff8a66aa, ff8a66dd, ff8a66ff]
+        length: 315
+        width: 20
+        sideAngle: 30
+        sideLength: 32
+        sideWidth: 4
+        lifetime: 30
+        lightningLength: 5
+        lightningLengthRand: 4
+        lightning: 4
+        lightningColor: ffb861
+        createChance: 0.3
+        }
+        }
+        ]
+    type: BasicBulletType
+    damage: 25
+    splashDamage: 95
+    splashDamageRadius: 50
+    sprite: frozen-farlands-pin-bullet
+    width: 20
+    height: 40
+    shrinkY: 0
+    shrinkX: 0.6
+    shrinkInterp: bounceOut
+    speed: 10
+    frontColor: ffb861
+    backColor: ff8a66
+    lifetime: 32
+    trailLength: 12
+    trailParam: 4
+    trailColor: ff8a66
+    hitSound: dullExplosion
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: WaveEffect
+        colorFrom: ffb861
+        colorTo: ff8a66
+        sizeFrom: 50
+        sizeTo: 50
+        strokeFrom: 0
+        strokeTo: 4
+        interp: slope
+        lifetime: 60
+        }
+        {
+        type: ParticleEffect
+        colorFrom: ffb861
+        colorTo: ff8a66
+        sizeFrom: 12
+        particles: 10
+        length: 60
+        lifetime: 300
+        interp: pow10Out
+        sizeInterp: pow10In
+        }
+        {
+        type: ParticleEffect
+        colorFrom: ffb861
+        colorTo: ff8a66
+        sizeFrom: 8
+        particles: 16
+        length: 60
+        lifetime: 295
+        interp: pow10Out
+        sizeInterp: pow10In
+        }
+        {
+        type: ParticleEffect
+        colorFrom: ffb861
+        colorTo: ff8a66
+        sizeFrom: 6
+        particles: 30
+        length: 60
+        lifetime: 300
+        interp: pow10Out
+        sizeInterp: pow10In
+        }
+        ]
+        }
+    despawnEffect: none
+    shootEffect: shootTitan
+    smokeEffect:   {
+        type: ParticleEffect
+        colorFrom: ffb861
+        colorTo: ff8a66
+        sizeFrom: 7
+        particles: 8
+        length: 50
+        lifetime: 95
+        cone: 15
+        interp: pow10Out
+        sizeInterp: pow10In
+        }
+}
+}
+]

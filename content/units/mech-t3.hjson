@@ -1,0 +1,137 @@
+outlineColor: 36363c
+type: mech
+speed: 0.8
+hitSize: 14
+health: 1300
+faceTarget: true
+armor: 3
+range: 140
+rotateSpeed: 2.5
+mechFrontSway: 0.6
+mechSideSway: 0.6
+mechStepParticles: true
+stepShake: 0.4
+hovering: false
+immunities: [
+freezing
+]
+targetAir: true
+weapons: [
+{
+name: mech-t3-weapon
+x: 12
+y: 0
+mirror: true
+shootSound: bolt
+reload: 12
+shootY: 4
+rotate: true
+rotationLimit: 15
+rotateSpeed: 2
+top: false
+layerOffset: -0.001
+recoil: 2
+shoot: {
+type: shootBarrel
+barrels: [
+-1, 0, 0,
+1, 0, 0,
+]
+}
+bullet: {
+trailRotation: true
+type: railBulletType
+length: 200
+damage: 35
+pierceCap: 2
+pierceDamageFactor: .5
+collidesAir: false
+pointEffectSpace: 6
+ammoMultiplier: 1
+shootEffect: none
+hitEffect: [
+{
+line: true
+particles: 6
+lenFrom: 7
+lifetime: 10
+lenTo: 0
+sizeFrom: 10
+sizeTo: 0
+colorFrom: ffffff
+colorTo: b7e7ff00
+rotWithParent: true
+baseRotation: 0
+}
+{
+type: waveEffect
+strokeFrom: 1
+strokeTo: 0
+colorFrom: ffffff
+colorTo: b7e7ff00
+lifetime: 12
+sizeFrom: 1
+sizeTo: 10
+}
+]
+smokeEffect: {
+line: true
+cone: 60
+particles: 4
+lenFrom: 7
+lifetime: 10
+lenTo: 0
+sizeFrom: 10
+sizeTo: 0
+colorFrom: ffffff
+colorTo: b7e7ff00
+rotWithParent: true
+baseRotation: 0
+}
+endEffect: {
+line: true
+cone: 60
+particles: 4
+lenFrom: 7
+lifetime: 10
+lenTo: 0
+sizeFrom: 10
+sizeTo: 0
+colorFrom: b7e7ff
+colorTo: b7e7ff00
+rotWithParent: true
+baseRotation: 0
+}
+pointEffect:[
+ {
+line: true
+cone: 0
+particles: 1
+lenFrom: 10
+lifetime: 10
+lenTo: 0
+sizeFrom: 7
+sizeTo: 0
+colorFrom: b7e7ff
+colorTo: b7e7ff
+rotWithParent: true
+baseRotation: 0
+}
+ {
+line: true
+cone: 0
+particles: 1
+lenFrom: 10
+lifetime: 10
+lenTo: 0
+sizeFrom: 10
+sizeTo: 0
+colorFrom: ffffff
+colorTo: b7e7ff00
+rotWithParent: true
+baseRotation: 0
+}
+]
+}
+}
+]

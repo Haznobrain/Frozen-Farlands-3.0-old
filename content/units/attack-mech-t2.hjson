@@ -1,0 +1,118 @@
+flying: false
+type: mech
+drag: 0.3
+speed: 0.4
+rotateSpeed: 2.1
+accel: 0.4
+range: 130
+health: 600
+buildSpeed: 0.1
+engineOffset: 6.5
+hitSize: 9
+itemCapacity: 5
+mechFrontSway: 0.3
+mechSideSway: 0.4
+mechStepParticles: true
+stepShake: 0.4
+outlineColor: 252529
+
+weapons: [
+{
+name: attack-mech-t2-weapon
+top: false
+mirror: true
+y: 0
+x: 0
+shootX: 6
+reload: 65
+ejectEffect: none
+recoil: 4
+shootSound: weak-shot1
+inaccuracy: 10
+alternate: true
+shoot: {
+    shots: 2
+}
+bullet: {
+    type: ArtilleryBulletType
+    speed: 3
+    frontColor: ffb861
+    backColor: ff8a66
+    lifetime: 70
+    damage: 0
+    collidesAir: false
+    collidesTiles: true
+    trailLength: 10
+    trailChance: 0.5
+    height: 10
+    width: 12
+    shrinkInterp: slope
+    trailInterp: slope
+    trailParam: 2
+    splashDamage: 15
+    splashDamageRadius: 16
+    trailEffect: {
+        type: ParticleEffect
+        length: 20
+        particles: 8
+        sizeFrom: 5
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        //this makes the smoke "smokier", more noisy.
+        region: particle
+        lifetime: 35
+        interp: linear
+    }
+    hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: WaveEffect
+        strokeFrom: 8
+        sizeTo: 16
+        strokeTo: 0
+        colorFrom: ffb861
+        colorTo: ff8a66
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 300
+        sizeFrom: 6
+        sizeTo: 0
+        length: 20
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        }
+        {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 300
+        sizeFrom: 8
+        particles: 2
+        sizeTo: 0
+        length: 20
+        colorFrom: ffb861
+        colorTo: ff8a66aa
+        }
+        ]
+        }
+    despawnEffect: none
+    shootEffect: shootBigColor
+    smokeEffect: {
+        type: ParticleEffect
+        interp: pow10Out
+        sizeInterp: pow5In
+        lifetime: 70
+        cone: 15
+        sizeFrom: 3
+        sizeTo: 0
+        length: 20
+        colorFrom: ffb861aa
+        colorTo: ff8a66aa
+        }
+}
+}
+]

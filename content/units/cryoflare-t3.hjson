@@ -1,0 +1,82 @@
+name: cirrius
+description: A nimble flying attack drone, armed with a missile launcher.
+type: flying
+rotateSpeed: 2
+fogRadius: 0
+template: ErekirUnitType
+range: 60
+faceTarget: true
+targetPriority: -2
+lowAltitude: true
+flying: true
+speed: 4
+drag: 0.08
+accel: 0.05
+itemCapacity: 45
+health: 330
+armor: 1
+hitSize: 9
+engineSize: 0
+outlineColor: 0f0f14
+isEnemy: false
+engines: [
+  {
+    x: 0
+    y: -7
+    rotation: 270
+    radius: 4
+  }
+  {
+    x: 4
+    y: -6
+    rotation: 135
+    radius: 3
+  }
+  {
+    x: -4
+    y: -6
+    rotation: 45
+    radius: 3
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: 0
+    shootY: 32
+    mirror: false
+    reload: 180
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.9
+    shootSound: UnitLaserGun
+    recoil: 0
+    shake: 6
+    bullet: {
+      type: LaserBulletType
+      damage: 100
+      recoil: 4
+      length: 440
+      width: 40
+      lifetime: 30
+      statusDuration: 1
+      colors: [00eeff70, 00eeff, FFFFFFF]
+      sideLength: 70
+      smokeEffect: {
+        followParent: false
+        particles: 1
+        length: 20
+        baseLength: 24
+        randLength: false
+        lifetime: 70
+        cone: 0
+        offset: 90
+        region: frozen-farlands-pulsewave
+        sizeFrom: 20
+        sizeTo: 35
+        colorFrom: 7382f0
+        colorTo: 7382f000
+      }
+    }
+  }
+]
+buildBeamOffset: 7

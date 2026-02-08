@@ -1,0 +1,134 @@
+type: flying
+flying: true
+speed: 2.4
+health: 1800
+armor: 2
+drag: 0.07
+accel: 0.08
+engineOffset: 11
+engineSize: 3
+hitSize: 20
+lowAltitude: true
+mineSpeed: 2
+mineTier: 4
+mineRange: 50
+    "faceTarget": true,
+    buildSpeed: 0.5
+    buildRange: 150
+itemCapacity: 40
+rotateSpeed: 4.8
+outlineColor: 252529
+mineItems: [
+  a1-yttrium
+  a2-arcanite
+]
+abilities: [
+            {
+            "type": "ForceFieldAbility"
+            "radius": 60,
+            "regen": 1,
+            "max": 1500,
+            "cooldown": 380,
+            sides: 6
+            }
+    ]
+weapons: [
+  {
+  name: supportflare-t3
+  top: false
+  recoil: 0
+  mirror: false
+  x: 0
+  y: 0
+  minWarmup: 0.9
+  shootWarmupSpeed: 0.1
+  parts: [
+{
+type: RegionPart
+suffix: -arm
+heatColor: ff0000
+progress: warmup
+heatProgress: recoil
+moveRot: 5
+moveY: 0
+mirror: true
+moves: [
+{
+type: PartMove
+progress: recoil
+rot: -15
+y: -2
+}
+  ]
+}
+    ]
+reload: 15
+shootSound: shootAltLong
+shootStatus: slow
+shootStatusDuration: 20
+bullet: {
+    type: BasicBulletType
+    damage: 20
+    splashDamage: 5
+    healPercent: 2.5
+    speed: 8
+    width: 12
+    height: 20
+    trailWidth: 5
+    shrinkY: 0.5
+    shrinkX: 0
+    drag: 0.02
+    lifetime: 40
+    trailLength: 5
+    hitColor: 73ffae
+    spawnBullets: [
+{
+type: LightningBulletType
+damage: 6
+lightningLength: 15
+lightningColor: 73ffae
+lifetime: 12
+healPercent: 1.5
+despawnSound: zap
+  }
+      ]
+    backColor: 73ffae
+    trailColor: 73ffae
+    frontColor: ffffff
+    shootEffect: shootBigColor
+    smokeEffect: colorSparkBig
+    hitEffect:{
+      type: MultiEffect
+      effects: [greenCloud, {
+          type: ParticleEffect
+          particles: 8
+          line: true
+          lenFrom: 2
+          lenTo: 0
+          sizeInterp: pow10Out
+          interp: pow5In
+          length: 16
+          colorFrom: 73ffae
+          colorTo: 73ffae
+          randLength: false
+          strokeFrom: 1
+          lifetime: 30
+            }
+        {
+        type: WaveEffect
+        sizeTo: 16
+        strokeFrom: 4
+        lifetime: 10
+        colorFrom: 73ffae
+        colorTo: 73ffae
+          }
+        ]
+    }
+    despawnEffect: massiveExplosion
+    splashDamageRadius: 16
+    collidesTeam: true
+    hitSound: dullExplosion
+    despawnHit: true
+      }
+}
+]

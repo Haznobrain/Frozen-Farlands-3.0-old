@@ -1,0 +1,189 @@
+type: flying
+flying: true
+speed: 1.06666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+outlineColor: 0f0f14
+rotateSpeed: 2.05
+hitSize: 30
+engineOffset: 18
+engineSize: 6
+engines: [
+  {
+  radius: 4
+  y: -20
+  x: 17
+    }
+  {
+  radius: 4
+  y: -20
+  x: -17
+    }
+  {
+  radius: 6
+  y: -14.5
+  x: 16
+    }
+  {
+  radius: 6
+  y: -14.5
+  x: -16
+    }
+  ]
+lowAltitude: true
+faceTarget: true
+buildSpeed: 1.5
+buildRange: 200
+health: 18500
+armor: 16
+weapons: [
+{
+name: supportflare-t5
+x: 0
+y: 0
+recoil: 0
+top: false
+mirror: false
+shootY: 8
+continuous: true
+minWarmup: 0.5
+shootWarmupSpeed: 0.05
+reload: 180
+parts: [
+{
+suffix: -arm
+moveY: -4
+moveX: 3
+progress: warmup
+heatColor: ff0000
+mirror: true
+heatProgress: recoil
+}
+]
+shootStatus: unmoving
+shootSound: beam
+shootStatusDuration: 360
+bullet: {
+  type: ContinuousLaserBulletType
+  length: 200
+  width: 8
+  damage: 25
+  colors: [50a38555, 50a385aa, 73ffae, ffffffff]
+  lifetime: 300
+  hitColor: 73ffae
+  healPercent: 5
+  collidesTeam: true
+  incendAmount: 0
+  hitEffect: {
+    type: ParticleEffect
+    colorTo: 73ffae
+    line: true
+    lenFrom: 5
+    lenTo: 0
+    strokeFrom: 6
+    strokeTo: 0
+    lifetime: 30
+    sizeInterp: elastic
+    length: 32
+    particles: 10
+    }
+  despawnEffect: {
+      type: MultiEffect
+      effects:[shootBigColor, {
+        type: ParticleEffect
+        cone: 15
+        colorFrom: 73ffaeff
+        colorTo: 73ffaeaa
+        lifetime: 70
+        length: 60
+        particles: 12
+        sizeFrom: 7
+        interp: pow10In
+        sizeInterp: swingOut
+        sizeTo: 0
+        }
+      ]
+      }
+  fragBullets: 1
+  fragRandomSpread: 0
+  fragVelocityMin: 1
+  pierceCap: 15
+  lightning: 3
+  lightningDamage: 5
+  lightningLength: 11
+  lightningColor: 73ffae
+  fragOnHit: true
+  fragBullet: {
+      type: BasicBulletType
+      damage: 10
+      splashDamage: 10
+      splashDamageRadius: 50
+      hitEffect: {
+        type: MultiEffect
+        effects: [titanExplosion, titanSmoke]
+          }
+      hitColor: 73ffae
+      backColor: 73ffae
+      frontColor: ffffff
+      trailColor: 73ffae
+      width: 20
+      height: 30
+      trailWidth: 10
+      trailLength: 3
+      sprite: circle-bullet
+      pierce: true
+      pierceCap: 8
+      lightning: 6
+      lightningLength: 8
+      lightningColor: 73ffae
+      lightningDamage: 5
+      speed: 12
+      lifetime: 17
+      despawnEffect: {
+        type: MultiEffect
+        effects: [
+          {
+          type: ParticleEffect
+          cone: 15
+          colorFrom: 73ffaeff
+          colorTo: 73ffaeaa
+          lifetime: 70
+          length: 60
+          particles: 12
+          sizeFrom: 7
+          sizeTo: 0
+          }
+          {
+          type: ParticleEffect
+          colorFrom: 73ffae
+          colorTo: 73ffae
+          lifetime: 70
+          length: 50
+          particles: 25
+          sizeFrom: 7
+          sizeTo: 0
+          interp: pow10In
+          sizeInterp: swingIn
+          }
+          { 
+          type: WaveEffect
+          colorFrom: 73ffae
+          colorTo: 73ffae
+          sizeTo: 50
+          strokeFrom: 15
+          strokeTo: 0
+          }
+          ]
+          }
+        }
+      }
+    }
+    ]
+abilities: [
+            {
+            "type": "ForceFieldAbility"
+            "radius": 80,
+            "regen": 5,
+            "max": 2000,
+            "cooldown": 380,
+            sides: 6
+            }
+    ]
