@@ -1,8 +1,21 @@
 name: "frozen farlands"
 displayName: "[#1ba8fa[]]Frozen Farlands 3.0[white[]]"
-author: "[#3bdbff[]]Hyperium[white[]] & [#11d41e[]]Zielony Trójkąt[white[]]"
-description: "ff 3.0 priv"
+subtitle: "actually it releases now"
+author: "[orange]Haznobrain, [#3bdbff[]]Hyperium[white[]] & [#11d41e[]]Zielony Trójkąt[white[]]"
+description: "A year ago. A year ago i was working on this, on ff 3.0. A year ago, CY4 chose to kick me out of the dev team.
+
+I was not informed
+
+For three weeks.
+
+I was given no real reason at the time.
+
+Today i realised i still had access to the old repo and that i had free will.
+
+Thus here is the prototype for Frozen Farlands 3.0 that i worked on.
+
+Revenge is a dish best served frozen."
 version: "0.1"
-minGameVersion: "143.1"
+minGameVersion: "154"
 hidden: false
 subtitle: ff 3.0
