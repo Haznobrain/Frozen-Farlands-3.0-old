@@ -1,0 +1,17 @@
+type: Wall
+category: defense
+health: 200
+size: 1
+drawTeamOverlay: false
+forceDark: false
+mapColor: 243752
+useColor: false
+hasColor: true
+variants: 2
+
+requirements: [
+  lead/6
+]
+researchCost: [
+  lead/100
+]

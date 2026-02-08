@@ -1,0 +1,3 @@
+type: StaticWall
+variants: 2
+itemDrop: a3-ice-shard
