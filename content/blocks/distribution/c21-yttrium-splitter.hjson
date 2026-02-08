@@ -1,0 +1,14 @@
+type: DuctRouter
+health: 100
+speed: 10
+
+requirements: [
+  a1-yttrium/4
+]
+researchCost: [
+  a1-yttrium/40
+]
+
+research: {
+  parent: c11-yttrium-conveyor
+}

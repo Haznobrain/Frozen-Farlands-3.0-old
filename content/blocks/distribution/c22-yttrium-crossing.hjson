@@ -1,0 +1,15 @@
+type: Junction
+health: 100
+speed: 10
+capacity: 8
+
+requirements: [
+  a1-yttrium/3
+]
+researchCost: [
+  a1-yttrium/30
+]
+
+research: {
+  parent: c21-yttrium-splitter
+}

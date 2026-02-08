@@ -1,0 +1,16 @@
+type: ItemBridge
+hasPower: false
+health: 100
+range: 4
+transportTime: 4
+
+requirements: [
+  a1-yttrium/5
+]
+researchCost: [
+  a1-yttrium/20
+]
+
+research: {
+  parent: c22-yttrium-crossing
+}
