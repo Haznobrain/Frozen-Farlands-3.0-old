@@ -1,0 +1,8 @@
+gas: false
+color: 37474a
+explosiveness: 0.0
+flammability: 0.3
+temperature: 0.5
+viscosity: 0.9
+heatCapacity: 0.5
+effect: T2-radioactivity

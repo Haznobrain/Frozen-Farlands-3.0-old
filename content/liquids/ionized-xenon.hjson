@@ -1,0 +1,7 @@
+gas: true
+color: aed9ff
+explosiveness: 0.5
+flammability: 0
+temperature: 3.0
+viscosity: 0.5
+heatCapacity: 0.5

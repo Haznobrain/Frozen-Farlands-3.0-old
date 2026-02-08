@@ -1,0 +1,9 @@
+gas: false
+color: f0f0f0
+explosiveness: 1.0
+flammability: 1.0
+temperature: 0.5
+viscosity: 0.5
+heatCapacity: 0.5
+
+effect: s3-nitric-corrosion
