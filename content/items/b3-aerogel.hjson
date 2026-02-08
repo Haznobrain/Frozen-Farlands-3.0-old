@@ -1,0 +1,11 @@
+type: item
+name: Aerogel
+description: Very light material that can be used for building flying units and laser absorbing walls decent durability.
+cost: 2
+color: d9dfff
+flammability: 0
+explosiveness: 0
+radioactivity: 0
+charge: 0
+research: b2-niobium
+hiddenOnPlanets: [serpulo, erekir]

@@ -1,0 +1,10 @@
+type: item
+cost: 1
+color: b86a2e
+flammability: 0
+explosiveness: 0
+radioactivity: 0
+charge: 0.0
+hardness: 1
+research: a1-yttrium
+hiddenOnPlanets: [serpulo, erekir]

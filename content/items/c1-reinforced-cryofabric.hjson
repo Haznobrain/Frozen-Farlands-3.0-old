@@ -1,0 +1,6 @@
+explosivity: -1
+radioactivity: 0.05
+cost: 5
+flammability: -1
+research: a4-cryogenium
+hiddenOnPlanets: [serpulo, erekir]
