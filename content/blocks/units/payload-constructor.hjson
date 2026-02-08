@@ -1,0 +1,23 @@
+  "type": "Constructor",
+  "description": "Melts bauxites and produces aluminium ingots",
+  "health": 450,
+  "size": 3,
+  "hasItems": true,
+  "craftEffect": "none",
+  "hasPower": true,
+  "updateEffect": "none",
+  filter: [
+    f12-yttrium-wall-large
+  ]
+  minBlockSize: 1
+  maxBlockSize: 2
+  "consumes": {
+  "power": 4.70
+  }
+  "requirements": [
+    a1-yttrium/25
+  ],
+  "category": "units"
+researchCost: [
+    a1-yttrium/250
+  ]

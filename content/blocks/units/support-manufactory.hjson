@@ -1,0 +1,35 @@
+type: UnitFactory
+health: 800
+size: 3
+category: units
+squareSprite: false
+consumes: {
+  power: 1.2
+}
+plans: [
+  {
+    unit: supportflare-t1
+    time: 300
+    requirements: [
+     a1-yttrium/25
+     a2-arcanite/15
+    ]
+  }
+  {
+    unit: supportmobile-t1
+    time: 300
+    requirements: [
+     a1-yttrium/25
+     a2-arcanite/15
+    ]
+  }
+]
+requirements: [
+     a1-yttrium/100
+     a2-arcanite/50
+]
+researchCost: [
+     a1-yttrium/250
+     a2-arcanite/150
+]
+research: a1-yttrium
