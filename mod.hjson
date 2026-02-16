@@ -16,6 +16,6 @@ Thus here is the prototype for Frozen Farlands 3.0 that i worked on.
 
 Revenge is a dish best served frozen."
 version: "0.1"
-minGameVersion: "154"
+minGameVersion: "155"
 hidden: false
 subtitle: ff 3.0
